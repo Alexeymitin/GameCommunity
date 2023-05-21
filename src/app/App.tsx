@@ -3,22 +3,28 @@ import { Navbar } from 'widgets/Navbar'
 import { classNames } from "shared/lib/classNames/classNames"
 import { useTheme } from "app/providers/ThemeProvider"
 import { AppRouter } from "app/providers/router"
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
+import { ThemeSwitcher } from 'features/ThemeSwitcher'
 import { Sidebar } from 'widgets/Sidebar'
+import { Suspense } from 'react'
+import { useTranslation } from 'react-i18next'
 
 
 const App = () => {
 
 	const {theme} = useTheme();
 
+	
+
 	return (
 		<div className={classNames('app', {}, [theme])}>
-			<Navbar></Navbar>
-			<div className='contentPage'>
-				<Sidebar></Sidebar>
-				<AppRouter/>
-			</div>			
-			<ThemeSwitcher/>
+			<Suspense fallback=''>
+				<Navbar></Navbar>
+				<div className='contentPage'>
+					<Sidebar></Sidebar>
+					<AppRouter/>
+				</div>			
+				<ThemeSwitcher/>
+			</Suspense>
 		</div>
 	)
 }
