@@ -13,3 +13,16 @@
 
 	min-height: 100vh;
 }
+
+button {
+	cursor: pointer;
+}
+
+.contentPage {
+	display: flex;
+}
+
+.pageWrapper {
+	flex-grow: 1;
+	padding: 45px;
+}

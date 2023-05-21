@@ -1,0 +1,32 @@
+// .button {
+// 	cursor: pointer;
+// }
+
+// .clear {
+// 	padding: 0;
+// 	margin: 0;
+// 	border: none;
+// 	background: none;
+// 	outline: none;
+// }
+
+.switcherLight {
+	background-color: #F46119;
+	&::after {
+		top: 5px;
+		left: 7px;
+		background-color: #ffffff;
+		content: "";
+	}
+}
+
+.switcherDark {
+	background-color: #ffffff;
+	&::after {
+		top: -4px;
+		left: 30px;
+		box-shadow: 10px 10px #15181f;
+		background-color: transparent;
+		content: "";
+	}
+}
