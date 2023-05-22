@@ -12,16 +12,18 @@
 
 .switcherLight {
 	background-color: #F46119;
+
 	&::after {
 		top: 5px;
 		left: 7px;
-		background-color: #ffffff;
+		background-color: #fff;
 		content: "";
 	}
 }
 
 .switcherDark {
-	background-color: #ffffff;
+	background-color: #fff;
+
 	&::after {
 		top: -4px;
 		left: 30px;

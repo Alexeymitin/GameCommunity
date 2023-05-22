@@ -1,15 +1,16 @@
 .themeSwitcher {
 	z-index: 5;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 75px;
-    height: 40px;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 75px;
+	height: 40px;
 	appearance: none;
 	border-radius: 20px;
-    outline: none;
-    box-shadow: 2px 2px 7px 0px #00000024;
+	outline: none;
+	box-shadow: 2px 2px 7px 0 #00000024;
 	transition: all 0.5s linear;
+
 	&::after {
 		position: absolute;
 		width: 30px;
