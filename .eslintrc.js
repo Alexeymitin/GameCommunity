@@ -37,6 +37,7 @@ module.exports = {
 		'react/function-component-definition': 'off',
 		'no-shadow': 'off',
 		'import/extensions': 'off',
-		'i18next/no-literal-string': ['error', { markupOnly: true }],
+		'i18next/no-literal-string': ['warn', { markupOnly: true }],
+		'max-len': ['error', {'ignoreComments': true, 'code': 100}]
 	},
 };

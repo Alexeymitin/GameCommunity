@@ -1,0 +1,21 @@
+.notFoundPage {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	font: var(--font-l);
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+
+	img {
+		height: 50px;
+		margin-right: 10px;
+	}
+}
