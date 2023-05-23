@@ -2,7 +2,7 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { useEffect, useState } from 'react';
 
 
-//Компонент для тестирования проброски ошибки
+//Компонент для тестирования ошибок
 
 export const BugButton = () => {
 

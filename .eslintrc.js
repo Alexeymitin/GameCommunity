@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-undef
 module.exports = {
 	env: {
 		browser: true,
@@ -10,7 +9,6 @@ module.exports = {
 		'plugin:react/recommended',
 		'plugin:@typescript-eslint/recommended',
 	],
-	overrides: [],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaVersion: 'latest',
@@ -37,7 +35,23 @@ module.exports = {
 		'react/function-component-definition': 'off',
 		'no-shadow': 'off',
 		'import/extensions': 'off',
-		'i18next/no-literal-string': ['warn', { markupOnly: true }],
+		'i18next/no-literal-string': [
+			'warn', { 
+				markupOnly: true, 
+				'ignoreAttribute': ['data-testid'] 
+			}],
 		'max-len': ['error', {'ignoreComments': true, 'code': 100}]
 	},
+	globals: {
+		__IS_DEV__: true,
+		module: true
+	},
+	overrides: [
+		{
+			files: ['**/src/**/*.test.{ts,tsx}'],
+			rules: {
+				'i18next/no-literal-string': 'off'
+			}
+		}
+	]
 };

@@ -5,7 +5,7 @@ import { useTheme } from 'app/providers/ThemeProvider';
 import { AppRouter } from 'app/providers/router';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { Sidebar } from 'widgets/Sidebar';
-import { Suspense, useEffect } from 'react';
+import { Suspense } from 'react';
 
 
 
