@@ -6,7 +6,8 @@ export enum ThemeButton {
 	SWITCHERLIGHT = 'switcherLight',
 	SWITCHERDARK = 'switcherDark',
 	SWITCHERLANGUAGE = 'switcherLanguage',
-	SWITCHERSIDEBAR = 'switcherSidebar'
+	SWITCHERSIDEBAR = 'switcherSidebar',
+	OUTLINE = 'outline'
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
