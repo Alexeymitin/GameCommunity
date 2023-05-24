@@ -5,7 +5,7 @@ import {
 } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeSwitcher } from './ThemeSwitcher';
-import { ThemeButton } from 'shared/ui/Button/Button';
+import { ButtonTheme } from 'shared/ui/Button/Button';
 
 
 export default {
@@ -28,7 +28,7 @@ Normal.args = {};
 
 export const Dark = Template.bind({});
 Dark.args = {
-	theme: ThemeButton.SWITCHERDARK
+	theme: ButtonTheme.SWITCHERDARK
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 

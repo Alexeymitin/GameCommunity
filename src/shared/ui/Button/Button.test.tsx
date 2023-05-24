@@ -1,4 +1,4 @@
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonTheme } from './Button';
 import { render, screen } from '@testing-library/react';
 
 describe('Button', () => {
@@ -8,7 +8,7 @@ describe('Button', () => {
 	});
 
 	test('test theme', () => {
-		render(<Button theme={ThemeButton.SWITCHERDARK}>TEST</Button>);
+		render(<Button theme={ButtonTheme.SWITCHERDARK}>TEST</Button>);
 		expect(screen.getByText('TEST')).toHaveClass('switcherDark');
 		screen.debug();
 	});

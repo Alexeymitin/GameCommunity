@@ -4,7 +4,7 @@ import {
 	ThemeDecorator 
 } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonSize, ButtonTheme } from './Button';
 
 
 export default {
@@ -28,20 +28,65 @@ Primary.decorators = [ThemeDecorator(Theme.DARK)];
 export const Outline = Template.bind({});
 Outline.args = {
 	children: 'Text',
-	theme: ThemeButton.OUTLINE,
+	theme: ButtonTheme.OUTLINE,
 };
 
 
 export const SwitcherLanguage = Template.bind({});
 SwitcherLanguage.args = {
 	children: 'Text',
-	theme: ThemeButton.SWITCHERLANGUAGE,
+	theme: ButtonTheme.SWITCHERLANGUAGE,
 };
 
-export const SwitcherSidebar = Template.bind({});
-SwitcherSidebar.args = {
+export const BackgroundTheme = Template.bind({});
+BackgroundTheme.args = {
 	children: 'Text',
-	theme: ThemeButton.SWITCHERSIDEBAR,
+	theme: ButtonTheme.BACKGROUND,
+};
+
+export const BackgroundInverted = Template.bind({});
+BackgroundInverted.args = {
+	children: 'Text',
+	theme: ButtonTheme.BACKGROUND_INVERTED,
+};
+
+
+export const SquareSizeM = Template.bind({});
+SquareSizeM.args = {
+	children: '>',
+	theme: ButtonTheme.BACKGROUND_INVERTED,
+	square: true,
+	size: ButtonSize.M
+};
+
+export const SquareSizeL = Template.bind({});
+SquareSizeL.args = {
+	children: '>',
+	theme: ButtonTheme.BACKGROUND_INVERTED,
+	square: true,
+	size: ButtonSize.L
+};
+
+export const SquareSizeXL = Template.bind({});
+SquareSizeXL.args = {
+	children: '>',
+	theme: ButtonTheme.BACKGROUND_INVERTED,
+	square: true,
+	size: ButtonSize.XL
+};
+
+export const OutlineSizeL = Template.bind({});
+OutlineSizeL.args = {
+	children: 'Text',
+	theme: ButtonTheme.OUTLINE,
+	size: ButtonSize.L
+};
+
+export const OutlineSizeXL = Template.bind({});
+OutlineSizeXL.args = {
+	children: 'Text',
+	theme: ButtonTheme.OUTLINE,
+	size: ButtonSize.XL
 };
 
 

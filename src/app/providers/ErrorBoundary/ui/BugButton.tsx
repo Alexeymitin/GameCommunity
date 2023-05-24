@@ -1,5 +1,5 @@
 /* eslint-disable i18next/no-literal-string */
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useEffect, useState } from 'react';
 
 
@@ -21,7 +21,7 @@ export const BugButton = () => {
 	return (
 		<Button 
 			onClick={onThrow}
-			theme={ThemeButton.SWITCHERLIGHT}
+			theme={ButtonTheme.SWITCHERLIGHT}
 		>
 			throw Error
 		</Button>
