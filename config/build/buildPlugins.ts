@@ -13,8 +13,8 @@ import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
 	
 	const { paths, isDev } = options;
-	
-	return [
+
+	const plugins = [
 		new HtmlWebpackPlugin({
 			template: paths.html,
 		}),
@@ -26,10 +26,16 @@ export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
 		new DefinePlugin({
 			__IS_DEV__: JSON.stringify(isDev)
 		}),
-		new HotModuleReplacementPlugin(),
-		new ReactRefreshPlugin(),
-		new BundleAnalyzerPlugin({
-			openAnalyzer: false
-		})
 	];
+
+	if (isDev) {
+		plugins.push(new ReactRefreshPlugin());
+		plugins.push(new BundleAnalyzerPlugin({
+			openAnalyzer: false
+		}));
+	}
+
+	
+	
+	return plugins;
 }
