@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './NotFoundPage.module.scss';
 import { useTranslation } from 'react-i18next';

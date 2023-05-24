@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { useEffect, useState } from 'react';
 

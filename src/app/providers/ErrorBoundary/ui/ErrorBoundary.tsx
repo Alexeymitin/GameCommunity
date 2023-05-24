@@ -1,5 +1,4 @@
 import React, { ErrorInfo, ReactNode, Suspense } from 'react';
-import { withTranslation } from 'react-i18next';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { PageError } from 'widgets/PageError';
 
@@ -17,7 +16,7 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
 		this.state = { hasError: false };
 	}
   
-	static getDerivedStateFromError(error: Error) {
+	static getDerivedStateFromError() {
 
 		return { hasError: true };
 	}

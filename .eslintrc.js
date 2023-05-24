@@ -26,11 +26,11 @@ module.exports = {
 		}],
 		'import/no-unresolved': 'off',
 		'import/prefer-default-export': 'off',
-		'no-unused-vars': 'warn',
+		'no-unused-vars': ['warn', { 'varsIgnorePattern': '_' }],
 		'react/react-in-jsx-scope': 'off',
 		'react/require-default-props': 'off',
 		'react/button-has-type': 1,
-		'react/jsx-props-no-spreading': 'warn',
+		'react/jsx-props-no-spreading': 'off',
 		'react/function-component-definition': 'off',
 		'no-shadow': 'off',
 		'import/extensions': 'off',
@@ -41,7 +41,7 @@ module.exports = {
 		'max-len': ['error', {
 			'ignoreComments': true,
 			'code': 100
-		}]
+		}],
 	},
 	globals: {
 		__IS_DEV__: true,

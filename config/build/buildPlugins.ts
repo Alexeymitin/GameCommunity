@@ -2,7 +2,6 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { 
 	DefinePlugin, 
-	HotModuleReplacementPlugin, 
 	ProgressPlugin, 
 	WebpackPluginInstance
 } from 'webpack';
