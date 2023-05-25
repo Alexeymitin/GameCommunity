@@ -9,15 +9,15 @@ import { Suspense } from 'react';
 
 
 
+
 const App = () => {
 
 	const {theme} = useTheme();
 
-	
 	return (
 		<div className={classNames('app', {}, [theme])}>
 			<Suspense fallback=''>
-				<Navbar></Navbar>
+				<Navbar/>
 				<div className='contentPage'>
 					<Sidebar></Sidebar>
 					<AppRouter/>

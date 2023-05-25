@@ -21,7 +21,7 @@ export const BugButton = () => {
 	return (
 		<Button 
 			onClick={onThrow}
-			theme={ButtonTheme.SWITCHERLIGHT}
+			theme={ButtonTheme.OUTLINE}
 		>
 			throw Error
 		</Button>
