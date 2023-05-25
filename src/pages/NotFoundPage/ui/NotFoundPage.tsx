@@ -2,7 +2,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './NotFoundPage.module.scss';
 import { useTranslation } from 'react-i18next';
-import Logo from '../assets/img/logo.png';
+// import Logo from '../assets/img/logo.png';
 
 
 interface NotFoundPageProps {
@@ -16,7 +16,7 @@ export const NotFoundPage = ({className}: NotFoundPageProps) => {
 	return (
 		<div className={classNames(cls.notFoundPage, {}, [className])}>
 			<div className={classNames(cls.wrapper, {}, [className])}>
-				<img src={Logo} alt="logo" />
+				{/* <img src={Logo} alt="logo" /> */}
 				<h1>TeamHost</h1>
 			</div>
 			<h2>{t('PAGE NOT FOUND')}</h2>

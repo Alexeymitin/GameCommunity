@@ -2,12 +2,12 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useState } from 'react';
 import { LangSwitcher } from 'features/LangSwitcher';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
-import { t } from 'i18next';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import AboutIcon from 'shared/assets/icons/about.svg';
 import MainIcon from 'shared/assets/icons/main.svg';
 import cls from './Sidebar.module.scss';
+import { useTranslation } from 'react-i18next';
 
 
 interface SidebarProps {
@@ -18,6 +18,8 @@ export const Sidebar = ({className}: SidebarProps) => {
 
 	const [collapsed, setCollapsed] = useState(false);
 
+	const { t } = useTranslation();
+
 	const onToggle = () => {
 		setCollapsed(prev => !prev);
 	};
@@ -27,14 +29,13 @@ export const Sidebar = ({className}: SidebarProps) => {
 			data-testid='sidebar'
 			className={classNames(cls.sidebar, {[cls.collapsed]: collapsed}, [className])}
 		>
-			<Button 
-				// eslint-disable-next-line i18next/no-literal-string
-				theme={ButtonTheme.BACKGROUND_INVERTED} 
+			<Button 	
+				data-testid='sidebar-toggle'			
 				onClick={onToggle}
-				data-testid='sidebar-toggle'
 				className={cls.collapseBtn}
-				square
+				theme={ButtonTheme.BACKGROUND_INVERTED} 
 				size={ButtonSize.L}
+				square
 			>
 				{collapsed ? '>' : '<'}
 			</Button>
