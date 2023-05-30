@@ -8,5 +8,7 @@
   "Main": "Main",
   "About": "About",
   "EN": "EN",
-  "Login": "Login"
+  "Login": "Login",
+  "Enter Username": "Enter Username",
+  "Enter Password": "Enter Password"
 }
