@@ -3,11 +3,16 @@
   "About": "About",
   "About Page": "About Page",
   "An unexpected error has occurred": "An unexpected error has occurred",
+  "Authorisation form": "Authorisation form",
+  "Authorization form": "Authorization form",
   "English": "English",
   "Enter": "Enter",
   "Enter Password": "Enter Password",
   "Enter Username": "Enter Username",
+  "Log": "Log",
+  "LogOut": "LogOut",
   "Login": "Login",
+  "Logout": "Logout",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
       "": ""
@@ -17,5 +22,6 @@
   "Main Page": "Main Page",
   "NOT FOUND PAGE": "NOT FOUND PAGE",
   "PAGE NOT FOUND": "PAGE NOT FOUND",
-  "Refresh page": "Refresh page"
+  "Refresh page": "Refresh page",
+  "Wrong login or password": "Wrong login or password"
 }

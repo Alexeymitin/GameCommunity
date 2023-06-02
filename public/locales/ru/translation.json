@@ -10,5 +10,8 @@
   "EN": "RU",
   "Login": "Войти",
   "Enter Password": "Введите Пароль",
-  "Enter Username": "Введите Имя Пользователя"
+  "Enter Username": "Введите Имя Пользователя",
+  "Authorization form": "Форма Авторизации",
+  "Wrong login or password": "Не верный логин или пароль",
+  "Logout": "Выйти"
 }
