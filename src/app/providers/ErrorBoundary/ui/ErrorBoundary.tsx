@@ -31,14 +31,12 @@ class ErrorBoundary
 		const { children } = this.props;
 
 		if (hasError) {
-
 			return (
 				<Suspense fallback="">
 					<PageError />
 				</Suspense>
 			);
 		}
-
 		return <>{children}</>;
 	}
 }

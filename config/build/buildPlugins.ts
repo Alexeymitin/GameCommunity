@@ -27,6 +27,8 @@ export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
 		}),
 	];
 
+	
+
 	if (isDev) {
 		plugins.push(new ReactRefreshPlugin());
 		plugins.push(new BundleAnalyzerPlugin({

@@ -5,7 +5,6 @@ import { PageLoader } from 'widgets/PageLoader';
 
 const AppRouter = () => {
 	return (
-		
 		<Routes>
 			{Object.values(routeConfig).map(({element, path}) => (
 				<Route

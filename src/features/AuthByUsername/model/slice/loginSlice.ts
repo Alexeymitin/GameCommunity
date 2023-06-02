@@ -32,6 +32,7 @@ const loginSlice = createSlice({
 				state.isLoading = false;
 				state.error = action.payload;
 			});
+
 	}, 
 });
 
