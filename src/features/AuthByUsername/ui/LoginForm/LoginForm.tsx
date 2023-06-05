@@ -3,16 +3,15 @@ import cls from './LoginForm.module.scss';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
-import { useDispatch, useSelector, useStore } from 'react-redux';
-import { memo, useCallback, useEffect } from 'react';
+import { useDispatch, useSelector} from 'react-redux';
+import { memo, useCallback } from 'react';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import { loginByUsername } from '../../model/services/loginByUserName/loginByUserName';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { ReduxStoreWithManager } from 'app/providers/StoreProvider';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
-import { getLoginIsError } from '../../model/selectors/getLoginError/getLoginError';
+import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 export interface LoginFormProps {
@@ -30,7 +29,7 @@ const LoginForm = memo(({className}: LoginFormProps) => {
 	const username = useSelector(getLoginUsername);
 	const password = useSelector(getLoginPassword);
 	const isLoading = useSelector(getLoginIsLoading);
-	const error = useSelector(getLoginIsError);
+	const error = useSelector(getLoginError);
 
 	const onChangeUsername = useCallback( (value) => {
 		dispatch(loginActions.setUsername(value));
