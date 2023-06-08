@@ -4,7 +4,6 @@ import { Theme, useTheme } from 'app/providers/ThemeProvider';
 // import LightIcon from 'widgets/ThemeSwitcher/assets/icons/themeLight.svg';
 // import DarkIcon from 'widgets/ThemeSwitcher/assets/icons/themeDark.svg';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { memo } from 'react';
 
 interface ThemeSwitcherProps {
 	className?: string;

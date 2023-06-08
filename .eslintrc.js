@@ -67,3 +67,5 @@ module.exports = {
 		}
 	}]
 };
+
+//['warn', { 'varsIgnorePattern': '_' }]
