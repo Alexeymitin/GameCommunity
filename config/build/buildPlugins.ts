@@ -11,7 +11,7 @@ import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
 	
-	const { paths, isDev } = options;
+	const { paths, isDev, apiUrl } = options;
 
 	const plugins = [
 		new HtmlWebpackPlugin({
@@ -23,7 +23,8 @@ export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
 			chunkFilename: 'css/[name].[contenthash:8].css'
 		}),
 		new DefinePlugin({
-			__IS_DEV__: JSON.stringify(isDev)
+			__IS_DEV__: JSON.stringify(isDev),
+			__API__: JSON.stringify(apiUrl)
 		}),
 	];
 

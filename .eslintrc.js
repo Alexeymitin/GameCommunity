@@ -31,7 +31,11 @@ module.exports = {
 		}],
 		'import/no-unresolved': 'off',
 		'import/prefer-default-export': 'off',
-		'no-unused-vars': ['warn', { 'varsIgnorePattern': '_' }],
+		'no-unused-vars': 'off',
+		'@typescript-eslint/no-unused-vars': [
+			'warn',
+			{ 'argsIgnorePattern': '^_' }
+		],
 		'react/react-in-jsx-scope': 'off',
 		'react/require-default-props': 'off',
 		'react/button-has-type': 1,
@@ -45,7 +49,7 @@ module.exports = {
 		}],
 		'max-len': ['error', {
 			'ignoreComments': true,
-			'code': 120
+			'code': 130
 		}],
 		'jsx-a11y/no-static-element-interactions': 'off',
 		'jsx-a11y/click-events-have-key-events': 'off',
@@ -57,6 +61,7 @@ module.exports = {
 	},
 	globals: {
 		__IS_DEV__: true,
+		__API__: true,
 		module: true,
 	},
 	overrides: [{

@@ -9,11 +9,7 @@ import { Suspense, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { userActions } from 'entities/User';
 
-
-
-
 const App = () => {
-
 	const {theme} = useTheme();
 	const dispatch = useDispatch();
 

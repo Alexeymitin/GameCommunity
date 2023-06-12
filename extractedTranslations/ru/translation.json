@@ -5,6 +5,7 @@
   "An unexpected error has occurred": "An unexpected error has occurred",
   "Authorisation form": "Authorisation form",
   "Authorization form": "Authorization form",
+  "Edit": "Edit",
   "English": "English",
   "Enter": "Enter",
   "Enter Password": "Enter Password",
@@ -22,7 +23,11 @@
   "Main Page": "Main Page",
   "NOT FOUND PAGE": "NOT FOUND PAGE",
   "PAGE NOT FOUND": "PAGE NOT FOUND",
+  "Profile": "Profile",
   "Progile Page": "Progile Page",
   "Refresh page": "Refresh page",
-  "Wrong login or password": "Wrong login or password"
+  "Wrong login or password": "Wrong login or password",
+  "Your ": "Your ",
+  "Your last name": "Your last name",
+  "Your name": "Your name"
 }
