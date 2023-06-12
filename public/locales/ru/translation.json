@@ -1,6 +1,4 @@
 {
-  "Test example": "Тестовый пример",
-  "Translate": "Перевод",
   "English": "Русский",
   "PAGE NOT FOUND": "Страница не найдена",
   "An unexpected error has occurred": "Произошла непредвиденная ошибка",
@@ -13,5 +11,9 @@
   "Enter Username": "Введите Имя Пользователя",
   "Authorization form": "Форма Авторизации",
   "Wrong login or password": "Не верный логин или пароль",
-  "Logout": "Выйти"
+  "Logout": "Выйти",
+  "Main Page": "Главная страница",
+  "About Page": "О сайте",
+  "Profile Page": "Профиль",
+  "Currency": "Валюта"
 }
