@@ -1,11 +1,13 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { 
+	ValidateProfileError,
 	fetchProfileData, 
 	getProfileError, 
 	getProfileForm, 
 	getProfileIsLoading, 
 	getProfileReadonly, 
+	getProfileValidateErrors, 
 	profileActions, 
 	profileReducer 
 } from 'entities/Profile';
@@ -15,6 +17,8 @@ import { ProfileCard } from 'entities/Profile';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { useTranslation } from 'react-i18next';
 
 const reducers: ReducersList = {
 	profile: profileReducer
@@ -25,14 +29,25 @@ interface ProfilePageProps {
 }
 
 const ProfilePage = ({className}: ProfilePageProps) => {
+	const {t} = useTranslation('profile');
 	const dispatch = useDispatch();
 	const formData = useSelector(getProfileForm);
 	const isLoading = useSelector(getProfileIsLoading);
 	const error = useSelector(getProfileError);
 	const readonly = useSelector(getProfileReadonly);
+	const validateErrors = useSelector(getProfileValidateErrors);
+	const validateErrorTranslates = {
+		[ValidateProfileError.SERVER_ERROR]: t('Server Error'),
+		[ValidateProfileError.INCORRECT_AGE]: t('Incorrect age'),
+		[ValidateProfileError.INCORRECT_COUNTRY]: t('Incorrect country'),
+		[ValidateProfileError.INCORRECT_USER_DATA]: t('Incorrect Firstname'),
+		[ValidateProfileError.NO_DATA]: t('Incorrect data')
+	};
 
 	useEffect(() => {
-		dispatch(fetchProfileData());
+		if (__PROJECT__ !== 'storybook') {
+			dispatch(fetchProfileData());
+		}	
 	}, [dispatch]);
 
 	const onChangeFirstname = useCallback((value?: string) => {
@@ -48,12 +63,11 @@ const ProfilePage = ({className}: ProfilePageProps) => {
 	},[dispatch]);
 
 	const onChangeAge = useCallback((value?: string) => {
-		if (value?.match(/^[0-9]+$/)) {
+		if(value?.match(/^[0-9]+$/) || !value) {
 			dispatch(profileActions.updateProfile({age: Number(value || 0)}));
 		} else {
-			return '';
-		}
-			
+			'';
+		}	
 	},[dispatch]);
 
 	const onChangeUsername = useCallback((value?: string) => {
@@ -76,6 +90,9 @@ const ProfilePage = ({className}: ProfilePageProps) => {
 		<DynamicModuleLoader reducers={reducers} removeAfterUnmount>
 			<div className={classNames('', {}, [className])}>				
 				<ProfilePageHeader/>
+				{validateErrors?.length && validateErrors.map((err) => (
+					<Text theme={TextTheme.ERROR} text={validateErrorTranslates[err]} key={err}/>
+				))}
 				<ProfileCard
 					data={formData}
 					isLoading={isLoading}

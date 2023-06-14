@@ -11,5 +11,10 @@
   "City": "Город",
   "Nickname": "Имя пользователя",
   "Avatar link": "Ссылка на аватар",
-  "Country": "Страна"
+  "Country": "Страна",
+  "Server Error": "Ошибка сервера",
+  "Incorrect age": "Вы ввели некорректный возраст",
+  "Incorrect country": "Вы выбрали некорректную страну",
+  "Incorrect Firstname": "Вы ввели некорректное имя",
+  "Incorrect data": "Вы ввели некорректные данные"
 }

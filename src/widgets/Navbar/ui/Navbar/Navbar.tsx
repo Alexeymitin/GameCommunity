@@ -48,6 +48,7 @@ export const Navbar = memo(({className}: NavbarProps) => {
 	}
 
 	return (
+		
 		<div className={classNames(cls.navbar, {}, [className])}>
 			<Button
 				theme={ButtonTheme.OUTLINE}

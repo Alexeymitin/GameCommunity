@@ -1,13 +1,43 @@
+/* stylelint-disable font-family-name-quotes */
 @import 'reset';
 @import 'variables/global';
 @import 'themes/normal';
 @import 'themes/dark';
+
+@font-face {
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 400;
+	src: local("Roboto"),
+		url("../fonts/Nunito-Regular.woff2") format("woff2"),
+		url("../fonts/Nunito-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Nunito';
+	font-style: bold;
+	font-weight: 700;
+	src: local("Roboto"),
+		url("../fonts/Nunito-Bold.woff2") format("woff2"),
+		url("../fonts/Nunito-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Nunito';
+	font-style: light;
+	font-weight: 300;
+	src: local("Roboto"),
+		url("../fonts/Nunito-Light.woff2") format("woff2"),
+		url("../fonts/Nunito-Light.woff") format("woff");
+}
 
 
 body {
 	font: var(--font-m);
 	color: var(--primary-color);
 }
+
+
 
 .app {
 	background: var(--bg-color);

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Select } from 'shared/ui/Select/Select';
 import { memo, useCallback } from 'react';
 import { Country } from '../../model/types/Country';
+import cls from './CountrySelect.module.scss';
 
 interface CountrySelectProps {
 	className?: string;
@@ -28,7 +29,7 @@ export const CountrySelect = memo(({className, value, onChange, readonly}: Count
 
 	return (
 		<Select 
-			className={classNames('', {}, [className])}
+			className={classNames(cls.select, {}, [className])}
 			label={t('Country')}
 			options={options}
 			value={value}

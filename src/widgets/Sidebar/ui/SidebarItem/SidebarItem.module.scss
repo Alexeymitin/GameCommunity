@@ -1,9 +1,9 @@
-.items {
-	margin-top: 20px;
-	margin-left: 30px;
-	display: flex;
-	flex-direction: column;
-}
+// .items {
+// 	margin-top: 20px;
+// 	margin-left: 30px;
+// 	display: flex;
+// 	flex-direction: column;
+// }
 
 .item {
 	margin-top: 10px;
@@ -18,7 +18,10 @@
 }
 
 .icon {
-	fill: var(--inverted-primary-color);
+	fill: var(--icon-color);
+	width: 24px;
+	height: 24px;
+	transition: all 0.25s linear;
 }
 
 .collapsed {

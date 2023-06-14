@@ -2,10 +2,10 @@
 	height: calc(100vh - var(--navbar-height));
 	width: var(--sidebar-width);
 	padding: 30px 20px 30px 0;
-	border-right: 1px solid var(--border-color);
 	background: var(--inverted-bg-color);
 	position: relative;
 	transition: width 0.25s linear;
+	border-right: 1px solid var(--border-color);
 }
 
 .switchers {
@@ -18,11 +18,13 @@
 
 .collapseBtn {
 	position: absolute;
-	right: -32px;
+	right: -34px;
 	bottom: 32px;
 }
 
-
+.items {
+	position: relative;
+}
 
 .collapsed {
 	width: var(--sidebar-width-collapsed);

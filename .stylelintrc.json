@@ -5,6 +5,7 @@
 		"indentation": "tab",
 		"declaration-empty-line-before":"never",
 		"selector-class-pattern": null,
-		"no-empty-source": null
+		"no-empty-source": null,
+		"font-family-name-quotes": null
 	  }
   }
