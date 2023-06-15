@@ -15,6 +15,21 @@ export function useTheme(): UseThemeResult {
 		setTheme?.(newTheme);
 		document.body.className = newTheme;
 		localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
+		// Для внедрения более двух тем использовать конструкцию switch-case
+		// let newThemeThree: Theme;
+		// switch (theme) {
+		// case Theme.DARK:
+		// 	newThemeThree = Theme.LIGHT;
+		// 	break;
+		// case Theme.LIGHT:
+		// 	newThemeThree = Theme.ORANGE;
+		// 	break;
+		// case Theme.ORANGE:
+		// 	newThemeThree = Theme.DARK;
+		// 	break;
+		// default:
+		// 	newThemeThree = Theme.LIGHT;
+		// }
 	};
 
 	return {

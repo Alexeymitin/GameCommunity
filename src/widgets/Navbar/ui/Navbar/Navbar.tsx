@@ -67,4 +67,3 @@ export const Navbar = memo(({className}: NavbarProps) => {
 		</div>
 	);
 });
-
