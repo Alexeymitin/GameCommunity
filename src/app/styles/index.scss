@@ -55,4 +55,6 @@ button {
 .pageWrapper {
 	flex-grow: 1;
 	padding: 45px;
+	height: calc(100vh - var(--navbar-height));
+	overflow-y: auto;
 }
