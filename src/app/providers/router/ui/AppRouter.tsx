@@ -12,7 +12,7 @@ const AppRouter = () => {
 					{route.element}
 				</div>
 			</Suspense>
-		)
+		);
 		return (
 			<Route
 				key={route.path}
