@@ -3,21 +3,32 @@ import {
 	ThemeDecorator
 } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { ArticleImageBlockComponent } from './ArticleImageBlockComponent';
+import { Code } from './Code';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
-	title: 'nameDirectory/ArticleImageBlockComponent',
-	component: ArticleImageBlockComponent,
+	title: 'shared/Code',
+	component: Code,
 	argTypes: {
 		backgroundColor: { control: 'color' },
 	}
-} as ComponentMeta<typeof ArticleImageBlockComponent>;
+} as ComponentMeta<typeof Code>;
 
-const Template: ComponentStory<typeof ArticleImageBlockComponent> = (args) => <ArticleImageBlockComponent {...args} />;
+const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;
 
 export const Light = Template.bind({});
-Light.args = {};
+Light.args = {
+	text: 
+`export default {
+	title: 'nameDirectory/Code',
+	component: Code,
+	argTypes: {
+		backgroundColor: { control: 'color' },
+	}
+} as ComponentMeta<typeof Code>;
+
+const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;`
+};
 Light.decorators = [StoreDecorator({})];
 
 export const Dark = Template.bind({});

@@ -25,7 +25,7 @@
 	
 	&:focus, &:hover, &:active {
 		color: var(--color-focused);
-		background-color: rgb(244 97 25 / 5%);
+		background-color: var(--color-hover);
 
 		svg {
 			fill: var(--color-focused);

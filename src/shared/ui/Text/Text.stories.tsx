@@ -4,7 +4,7 @@ import {
 	ThemeDecorator 
 } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 
 
 export default {
@@ -45,21 +45,18 @@ PrimaryDark.args = {
 	title: 'Title lore iii',
 	text: 'description description description description'
 };
-
 PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const onlyTitleDark = Template.bind({});
 onlyTitleDark.args = {
 	title: 'Title lore iii',
 };
-
 onlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const onlyTextDark = Template.bind({});
 onlyTextDark.args = {
 	text: 'description description description description'
 };
-
 onlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const ErrorDark = Template.bind({});
@@ -68,8 +65,21 @@ ErrorDark.args = {
 	text: 'description description description description',
 	theme: TextTheme.ERROR
 };
-
 ErrorDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const SizeL = Template.bind({});
+SizeL.args = {
+	title: 'Title lore iii',
+	text: 'description description description description',
+	size: TextSize.L
+};
+
+export const SizeM = Template.bind({});
+SizeM.args = {
+	title: 'Title lore iii',
+	text: 'description description description description',
+	size: TextSize.M
+};
 
 
 

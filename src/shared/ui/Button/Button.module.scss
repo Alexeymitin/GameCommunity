@@ -4,13 +4,13 @@
 	padding: 6px 15px;
 }
 
-// .clear {
-// 	padding: 0;
-// 	margin: 0;
-// 	border: none;
-// 	background: none;
-// 	outline: none;
-// }
+.clear {
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+	outline: none;
+}
 
 .switcherLight {
 	background-color: #F46119;
@@ -53,9 +53,16 @@
 }
 
 .background {
-	background: var(--bg-color);
-	color: var(--primary-color);
-	border: none;
+	background: var(--color-hover);
+	color: var(--color-focused);
+	border: 1px solid transparent;
+	border-radius: 5px;
+	transition: all 0.25s linear;
+
+	&:hover, &:focus {
+		background: var(--color-focused);
+		color: white;
+	}
 }
 
 

@@ -1,15 +1,22 @@
 .app_light_theme {
 	--bg-color: #F5F5F5;
 	--inverted-bg-color: #fff;
-	--primary-color: #646464;
-	--secondary-color: #1f1f1f;
-	--inverted-primary-color: #fff;
-	--inverted-secondary-color: #646464;
+	--primary-color: #1f1f1f;
+	--secondary-color: #646464;
+	--inverted-primary-color: #646464;
+	--inverted-secondary-color: #1f1f1f;
 	--border-color: #F2F2F2;
 	--icon-color: #646464;
-	--color-focused: #F46119;
+
 
 	// skeleton
 	--skeleton-color: #fff;
 	--skeleton-shadow: #F5F5F5;
+
+	// code-bg
+	--code-bg: #fff;
+
+	// focus and hover
+	--color-hover: rgb(244 97 25 / 10%);
+	--color-focused: #F46119;
 }

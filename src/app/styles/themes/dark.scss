@@ -2,14 +2,20 @@
 	--bg-color: #15181f;
 	--inverted-bg-color: #0C1826;
 	--primary-color: #fff;
-	--secondary-color: #fff;
+	--secondary-color: #646464;
 	--inverted-primary-color: #646464;
 	--inverted-secondary-color: #fff;
 	--border-color: #030410;
 	--icon-color: #fff;
-	--color-focused: #F46119;
 
 	// skeleton
 	--skeleton-color: #646464;
 	--skeleton-shadow: #15181f;
+
+	// code-bg
+	--code-bg: #030410;
+
+	// focus and hover
+	--color-hover: rgb(244 97 25 / 20%);
+	--color-focused: #F46119;
 }

@@ -1,0 +1,19 @@
+.code {
+	border: 1px solid var(--primary-color);
+	max-height: 300px;
+	padding: 20px;
+	position: relative;
+	background: var(--code-bg);
+	color: var(--primary-color);
+	overflow: auto;
+}
+
+.copyBtn {
+	position: sticky;
+	left: calc(100% - 20px);
+	top: 0;
+
+	svg {
+		fill: white;
+	}
+}
