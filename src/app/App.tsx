@@ -6,12 +6,13 @@ import { AppRouter } from 'app/providers/router';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { getUserInited, userActions } from 'entities/User';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 
 const App = () => {
 	const {theme} = useTheme();
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 	const inited = useSelector(getUserInited);
 
 	useEffect(() => {

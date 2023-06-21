@@ -11,14 +11,17 @@ import {
 	profileActions, 
 	profileReducer 
 } from 'entities/Profile';
-import { useCallback, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useCallback } from 'react';
+import { useSelector } from 'react-redux';
 import { ProfileCard } from 'entities/Profile';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useParams } from 'react-router-dom';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 
 const reducers: ReducersList = {
 	profile: profileReducer
@@ -30,12 +33,13 @@ interface ProfilePageProps {
 
 const ProfilePage = ({className}: ProfilePageProps) => {
 	const {t} = useTranslation('profile');
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 	const formData = useSelector(getProfileForm);
 	const isLoading = useSelector(getProfileIsLoading);
 	const error = useSelector(getProfileError);
 	const readonly = useSelector(getProfileReadonly);
 	const validateErrors = useSelector(getProfileValidateErrors);
+	const {id} = useParams<{id: string}>();
 	const validateErrorTranslates = {
 		[ValidateProfileError.SERVER_ERROR]: t('Server Error'),
 		[ValidateProfileError.INCORRECT_AGE]: t('Incorrect age'),
@@ -44,11 +48,11 @@ const ProfilePage = ({className}: ProfilePageProps) => {
 		[ValidateProfileError.NO_DATA]: t('Incorrect data')
 	};
 
-	useEffect(() => {
-		if (__PROJECT__ !== 'storybook') {
-			dispatch(fetchProfileData());
-		}	
-	}, [dispatch]);
+	useInitialEffect(() => {
+		if (id) {
+			dispatch(fetchProfileData(id));
+		}		
+	});
 
 	const onChangeFirstname = useCallback((value?: string) => {
 		dispatch(profileActions.updateProfile({first: value || ''}));

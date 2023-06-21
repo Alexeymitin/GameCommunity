@@ -7,7 +7,7 @@ import { CommentList } from './CommentList';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
-	title: 'nameDirectory/CommentList',
+	title: 'entities/Comment/CommentList',
 	component: CommentList,
 	argTypes: {
 		backgroundColor: { control: 'color' },
@@ -17,9 +17,42 @@ export default {
 const Template: ComponentStory<typeof CommentList> = (args) => <CommentList {...args} />;
 
 export const Light = Template.bind({});
-Light.args = {};
+Light.args = {
+	comments: [
+		{
+			id: '1',
+			text: 'Hello world',
+			user: {id: '1', username: 'admin'}
+		},
+		{
+			id: '2',
+			text: 'Hello',
+			user: {id: '1', username: 'admin'}
+		}
+	]
+};
 Light.decorators = [StoreDecorator({})];
 
 export const Dark = Template.bind({});
-Dark.args = {};
+Dark.args = {
+	comments: [
+		{
+			id: '1',
+			text: 'Hello world',
+			user: {id: '1', username: 'admin'}
+		},
+		{
+			id: '2',
+			text: 'Hello',
+			user: {id: '1', username: 'admin'}
+		}
+	]
+};
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+
+export const Loading = Template.bind({});
+Loading.args = {
+	comments: [],
+	isLoading: true
+};
+Loading.decorators = [StoreDecorator({})];
