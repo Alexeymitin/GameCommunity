@@ -19,6 +19,7 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -150,30 +151,6 @@
       "userId": "2",
       "text": "asdasdasd",
       "id": "MVvGQoZ"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "sdsdsd",
-      "id": "qhwbMQV"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "Hello world",
-      "id": "C44xAw0"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "hello world",
-      "id": "O2SYx1T"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "sdasdasdasdasda",
-      "id": "9-Q4qIT"
     }
   ],
   "users": [
@@ -182,7 +159,7 @@
       "username": "admin",
       "password": "123",
       "role": "ADMIN",
-      "avatar": "https://oir.mobi/uploads/posts/2021-03/1616741653_10-p-khaker-krasivo-12.jpg"
+      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
     },
     {
       "id": "2",
@@ -195,24 +172,24 @@
   "profile": [
     {
       "id": "1",
-      "first": "adminTest",
-      "lastname": "admin1",
-      "age": 27,
+      "first": "jgh",
+      "lastname": "asf",
+      "age": 465,
       "currency": "RUB",
       "country": "Belarus",
       "city": "Moscow",
-      "username": "admin",
-      "avatar": "https://oir.mobi/uploads/posts/2021-03/1616741653_10-p-khaker-krasivo-12.jpg"
+      "username": "admin213",
+      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
     },
     {
       "id": "2",
-      "first": "admin",
-      "lastname": "admin",
-      "age": 46,
+      "first": "ulbi tv",
+      "lastname": "asf",
+      "age": 465,
       "currency": "RUB",
       "country": "Russia",
       "city": "Moscow",
-      "username": "user",
+      "username": "ulbi tv",
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ]

@@ -3,5 +3,7 @@
   "An error occurred during the uploading of an article": "Произошла ошибка при загрузке статьи",
   "Comments": "Комментарии",
   "Enter comment text": "Введите текст комментария",
-  "article.Create": "Создать"
+  "article.Create": "Создать",
+  "Read more": "Читать далее...",
+  "article.Back to list": "Назад к списку"
 }
