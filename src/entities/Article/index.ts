@@ -3,6 +3,7 @@ import { Article, ArticleView } from './model/types/article';
 import type { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
 import { getArticleDetailsData } from './model/selector/getArticleDetailsData/getArticleDetailsData';
 import { ArticleList } from './ui/ArticleList/ArticleList';
+import { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
 
 export {
 	ArticleDetails,
@@ -10,5 +11,6 @@ export {
 	Article,
 	ArticleView,
 	ArticleDetailsSchema,
-	getArticleDetailsData
+	getArticleDetailsData,
+	ArticleViewSelector
 };
