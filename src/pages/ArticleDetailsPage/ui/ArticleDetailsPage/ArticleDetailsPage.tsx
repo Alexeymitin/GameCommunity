@@ -18,6 +18,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { PageWrapper } from 'shared/ui/PageWrapper/PageWrapper';
 
 interface ArticleDetailsPageProps {
 	className?: string;
@@ -49,15 +50,15 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
 
 	if(!id) {
 		return (
-			<div className={classNames(cls.articleDetailsPage, {}, [className])}>
+			<PageWrapper className={classNames(cls.articleDetailsPage, {}, [className])}>
 				{t('Article not found')}
-			</div>
+			</PageWrapper>
 		);
 	}
 
 	return (
 		<DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-			<div className={classNames(cls.articleDetailsPage, {}, [className])}>
+			<PageWrapper className={classNames(cls.articleDetailsPage, {}, [className])}>
 				<Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
 					{t('Back to list')}
 				</Button>
@@ -65,7 +66,7 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
 				<Text className={cls.commentTitle} title={t('Comments')}/>
 				<AddCommentForm onSendComment={onSendComment}/>
 				<CommentList isLoading={commentsIsLoading} comments={comments}/>
-			</div>
+			</PageWrapper>
 		</DynamicModuleLoader>
 	);
 };

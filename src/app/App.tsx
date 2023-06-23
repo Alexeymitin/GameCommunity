@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import './styles/index.scss';
 import { Navbar } from 'widgets/Navbar';
 import { classNames } from 'shared/lib/classNames/classNames';
