@@ -2,7 +2,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './NotFoundPage.module.scss';
 import { useTranslation } from 'react-i18next';
-import { PageWrapper } from 'shared/ui/PageWrapper/PageWrapper';
+import { PageWrapper } from 'widgets/PageWrapper/PageWrapper';
 // import Logo from '../../../shared/assets/img/logo.png';
 
 
