@@ -5,6 +5,7 @@ import AboutIcon from 'shared/assets/icons/about.svg';
 import MainIcon from 'shared/assets/icons/main.svg';
 import ProfileIcon from 'shared/assets/icons/profile.svg';
 import ArticlesIcon from 'shared/assets/icons/newspaper.svg';
+import CreateIcon from 'shared/assets/icons/create.svg';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 
@@ -37,7 +38,13 @@ export const getSidebarItems = createSelector(
 					Icon: ArticlesIcon,
 					text: 'Article Page',
 					authOnly: true
-				}
+				},
+				{
+					path: RoutePath.article_create,
+					Icon: CreateIcon,
+					text: 'Create Article',
+					authOnly: true
+				},
 			);
 		}
 

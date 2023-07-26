@@ -25,6 +25,7 @@ import {
 } from '../../model/slices/articleDetailsPageRecommendationsSlice';
 import { fetchArticleRecommendations } from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
 import { articleDetailsPageReducer } from '../../model/slices';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
 
 interface ArticleDetailsPageProps {
@@ -43,11 +44,6 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
 	const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
 	const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading);
 	const dispatch = useAppDispatch();
-	const navigate = useNavigate();
-
-	const onBackToList = useCallback(() => {
-		navigate(RoutePath.articles);
-	}, [navigate]);
 
 	const onSendComment = useCallback((text: string) => {
 		dispatch(addCommentForArticle(text));
@@ -69,9 +65,7 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
 	return (
 		<DynamicModuleLoader reducers={reducers} removeAfterUnmount>
 			<PageWrapper className={classNames(cls.articleDetailsPage, {}, [className])}>
-				<Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
-					{t('Back to list')}
-				</Button>
+				<ArticleDetailsPageHeader/>		
 				<ArticleDetails id={id}/>
 				<Text
 					size={TextSize.L}

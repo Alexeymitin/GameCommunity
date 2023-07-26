@@ -3,9 +3,9 @@
   "An error occurred during the uploading of an article": "Произошла ошибка при загрузке статьи",
   "Comments": "Комментарии",
   "Enter comment text": "Введите текст комментария",
-  "article.Create": "Создать",
+  "Create": "Создать",
   "Read more": "Читать далее...",
-  "article.Back to list": "Назад к списку",
+  "Back to list": "Назад к списку",
   "Sort by": "Сортировать по...",
   "Search": "Поиск",
   "by": "по",
@@ -18,7 +18,8 @@
   "IT": "Айти",
   "Economic": "Экономика",
   "Science": "Наука",
-  "article.Recommendations": "Рекомендации",
-  "article.Comments": "Комментарии",
-  "article.Article not found": "Статья не найдена"
+  "Recommendations": "Рекомендации",
+  "article.Edit": "Редактировать",
+  "article.Back to list": "Назад к списку",
+  "Create Article": "Создать статью"
 }
