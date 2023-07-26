@@ -3,18 +3,18 @@ import {
 	ThemeDecorator
 } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { ArticleViewSelector } from './ArticleViewSelector';
+import { ArticleTypeTabs } from './ArticletypeTabs';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
-	title: 'entities/Article/ArticleViewSelector',
-	component: ArticleViewSelector,
+	title: 'entities/Article/ArticleTypeTabs',
+	component: ArticleTypeTabs,
 	argTypes: {
 		backgroundColor: { control: 'color' },
 	}
-} as ComponentMeta<typeof ArticleViewSelector>;
+} as ComponentMeta<typeof ArticleTypeTabs>;
 
-const Template: ComponentStory<typeof ArticleViewSelector> = (args) => <ArticleViewSelector {...args} />;
+const Template: ComponentStory<typeof ArticleTypeTabs> = (args) => <ArticleTypeTabs {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};

@@ -5,5 +5,17 @@
   "Enter comment text": "Enter comment text",
   "article.Create": "Create",
   "Read more": "Read more...",
-  "article.Back to list": "Back to list"
+  "article.Back to list": "Back to list",
+  "Sort by": "Sort by...",
+  "Search": "Search",
+  "by": "by",
+  "increasing": "increasing",
+  "decreasing": "decreasing",
+  "date of creation": "date of creation",
+  "title": "title",
+  "views": "views",
+  "All articles": "All articles",
+  "IT": "IT",
+  "Economic": "Economic",
+  "Science": "Science"
 }

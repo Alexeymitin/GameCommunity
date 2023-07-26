@@ -16,6 +16,8 @@ import {
 	getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { PageWrapper } from 'widgets/PageWrapper/PageWrapper';
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
+import { useSearchParams } from 'react-router-dom';
 
 interface ArticlesPageProps {
     className?: string;
@@ -27,23 +29,20 @@ const reducers: ReducersList = {
 
 const ArticlesPage = (props: ArticlesPageProps) => {
 	const { className } = props;
-	const { t } = useTranslation();
+	const { t } = useTranslation('article');
 	const dispatch = useAppDispatch();
 	const articles = useSelector(getArticles.selectAll);
 	const isLoading = useSelector(getArticlesPageIsLoading);
 	const view = useSelector(getArticlesPageView);
 	const error = useSelector(getArticlesPageError);
-
-	const onChangeView = useCallback((view: ArticleView) => {
-		dispatch(articlesPageActions.setView(view));
-	}, [dispatch]);
+	const [searchParams] = useSearchParams();
 
 	const onLoadNextPart = useCallback(() => {
 		dispatch(fetchNextArticlesPage());
 	}, [dispatch]);
 
 	useInitialEffect(() => {
-		dispatch(initArticlesPage());
+		dispatch(initArticlesPage(searchParams));
 	});
 
 	return (
@@ -52,11 +51,12 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 				onScrollEnd={onLoadNextPart}
 				className={classNames(cls.articlesPage, {}, [className])}
 			>
-				<ArticleViewSelector view={view} onViewClick={onChangeView} />
+				<ArticlesPageFilters/>
 				<ArticleList
 					isLoading={isLoading}
 					view={view}
 					articles={articles}
+					className={cls.list}
 				/>
 			</PageWrapper>
 		</DynamicModuleLoader>

@@ -5,5 +5,17 @@
   "Enter comment text": "Введите текст комментария",
   "article.Create": "Создать",
   "Read more": "Читать далее...",
-  "article.Back to list": "Назад к списку"
+  "article.Back to list": "Назад к списку",
+  "Sort by": "Сортировать по...",
+  "Search": "Поиск",
+  "by": "по",
+  "increasing": "возрастанию",
+  "decreasing": "убыванию",
+  "date of creation": "дате создания",
+  "title": "заголовку",
+  "views": "просмотрам",
+  "All articles": "Все статьи",
+  "IT": "Айти",
+  "Economic": "Экономика",
+  "Science": "Наука"
 }
