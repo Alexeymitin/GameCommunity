@@ -17,5 +17,8 @@
   "All articles": "All articles",
   "IT": "IT",
   "Economic": "Economic",
-  "Science": "Science"
+  "Science": "Science",
+  "article.Recommendations": "Recommendations",
+  "article.Comments": "Comments",
+  "article.Article not found": "Article not found"
 }

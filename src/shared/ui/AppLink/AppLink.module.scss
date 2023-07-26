@@ -1,4 +1,4 @@
-.appLink {
+.primary {
 	color: var(--primary-color);
 	display: flex;
 	align-items: center;
@@ -35,10 +35,6 @@
 			opacity: 1;
 		}
 	}
-}
-
-.primary {
-	color: var(--primary-color);
 }
 
 .secondary {

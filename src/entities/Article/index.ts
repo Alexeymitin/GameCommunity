@@ -5,7 +5,8 @@ import { getArticleDetailsData } from './model/selector/getArticleDetailsData/ge
 import { ArticleList } from './ui/ArticleList/ArticleList';
 import { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
 import { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
-import { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticletypeTabs';
+import { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
+
 
 export {
 	ArticleDetails,

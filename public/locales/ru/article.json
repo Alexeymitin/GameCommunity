@@ -17,5 +17,8 @@
   "All articles": "Все статьи",
   "IT": "Айти",
   "Economic": "Экономика",
-  "Science": "Наука"
+  "Science": "Наука",
+  "article.Recommendations": "Рекомендации",
+  "article.Comments": "Комментарии",
+  "article.Article not found": "Статья не найдена"
 }
