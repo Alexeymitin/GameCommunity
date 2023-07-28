@@ -8,6 +8,7 @@ import {
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 
 export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
 	
@@ -27,6 +28,11 @@ export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
 			__API__: JSON.stringify(apiUrl),
 			__PROJECT__: JSON.stringify(project)
 		}),
+		new CopyPlugin({
+			patterns: [
+				{from: paths.locales, to: paths.buildLocales}
+			]
+		})
 	];
 
 	
