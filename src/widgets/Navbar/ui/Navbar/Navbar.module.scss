@@ -9,20 +9,28 @@
 	img {
 		height: 50px;
 		margin-right: 10px;
-		animation: navspinv 2.4s infinite linear;
+		animation: navspin 2.4s infinite linear;
 	}
 }
 
-.links {
+.links,
+.dropdown {
 	margin-left: auto;
 }
 
-.mainLink {
-	margin-right: 15px;
-
+.primary {
+	&::before {
+		display: none;
+	}
 }
 
-@keyframes navspinv {
+
+
+.mainLink {
+	margin-right: 15px;
+}
+
+@keyframes navspin {
 	0% {
 		transform: translate3d(0, -5%, 0);
 	}

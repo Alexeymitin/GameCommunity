@@ -32,5 +32,16 @@ const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;`
 Light.decorators = [StoreDecorator({})];
 
 export const Dark = Template.bind({});
-Dark.args = {};
+Dark.args = {
+	text: 
+`export default {
+	title: 'nameDirectory/Code',
+	component: Code,
+	argTypes: {
+		backgroundColor: { control: 'color' },
+	}
+} as ComponentMeta<typeof Code>;
+
+const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;`
+};
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];

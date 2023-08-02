@@ -11,11 +11,12 @@
 }
 
 .options {
-	background: var(--listbox-bg);
+	background: var(--bg-color);
 	position: absolute;
 	z-index: 10000;
 	border-radius: 12px;
-	box-shadow: 4px 4px 8px var(--listbox-bg);
+	box-shadow: 4px 4px 8px var(--bg-color);
+	color: var(--primary-color);
 }
 
 .item {
@@ -30,6 +31,26 @@
 	opacity: 0.7;
 }
 
-.optionsTop {
+span {
+	color: var(--primary-color);
+}
+
+.optionsBottomLeft {
+	top: 100%;
+	right: 0;	
+}
+
+.optionsBottomRight {
+	top: 100%;
+	left: 0;
+}
+
+.optionsTopLeft {
 	bottom: 100%;
+	right: 0;
+}
+
+.optionsTopRight {
+	bottom: 100%;	
+	left: 0;
 }
