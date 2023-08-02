@@ -18,7 +18,8 @@ module.exports = {
 		'react',
 		'@typescript-eslint',
 		'i18next',
-		'react-hooks'
+		'react-hooks',
+		'fsd-checked-paths-plugin'
 	],
 	rules: {
 		'react/jsx-indent': ['error', 'tab'],
@@ -57,7 +58,8 @@ module.exports = {
 		'react-hooks/exhaustive-deps': 'error',
 		'no-param-reassign': 'off',
 		'react/display-name': 'off',
-		'@typescript-eslint/ban-ts-comment': 'off'
+		'@typescript-eslint/ban-ts-comment': 'off',
+		'fsd-checked-paths-plugin/paths-checker': 2
 	},
 	globals: {
 		__IS_DEV__: true,

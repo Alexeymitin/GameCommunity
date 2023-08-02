@@ -29,17 +29,17 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 		target
 	} = props;
 
-	const types = <Text text={article.type.join(', ')} className={cls.types}/>;
+	const types = <Text text={article?.type.join(', ')} className={cls.types}/>;
 	const views = (
 		<>
-			<Text text={String(article.views)} className={cls.views}/>
+			<Text text={String(article?.views)} className={cls.views}/>
 			<Icon Svg={EyeIcon}/>
 		</>
 	);
-	const image = <img src={article.img} alt={article.title} className={cls.img}/>;
+	const image = <img src={article?.img} alt={article?.title} className={cls.img}/>;
 
 	if (view == ArticleView.LIST) {
-		const textBlock = article.blocks.find(
+		const textBlock = article?.blocks.find(
 			block => block.type === ArticleBlockType.TEXT
 		) as ArticleTextBlock;
 
@@ -47,11 +47,11 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 			<div className={classNames(cls.articleListItem, {}, [className, cls[view]])}>
 				<Card className={cls.card}>
 					<div className={cls.header}>
-						<Avatar size={30} src={article.user.avatar}/>
-						<Text text={article.user.username} className={cls.username}/>
-						<Text text={article.createdAt} className={cls.date}/>
+						<Avatar size={30} src={article?.user.avatar}/>
+						<Text text={article?.user.username} className={cls.username}/>
+						<Text text={article?.createdAt} className={cls.date}/>
 					</div>
-					<Text title={article.title} className={cls.title}/>
+					<Text title={article?.title} className={cls.title}/>
 					{types}
 					{image}
 					{textBlock && (
@@ -60,7 +60,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 					<div className={cls.footer}>
 						<AppLink
 							target={target}
-							to={RoutePath.article_details + article.id}
+							to={RoutePath.article_details + article?.id}
 							theme={AppLinkTheme.SECONDARY}
 						>
 							<Button theme={ButtonTheme.BACKGROUND}>

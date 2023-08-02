@@ -3,7 +3,7 @@ import cls from './ArticleList.module.scss';
 import { Article, ArticleView } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
-import { HTMLAttributeAnchorTarget, memo } from 'react';
+import { HTMLAttributeAnchorTarget, memo} from 'react';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
 
@@ -50,13 +50,26 @@ export const ArticleList = memo((props: ArticleListProps) => {
 			</div>
 		);
 	}
-
+	
 	return (
-		<div className={classNames(cls.articleList, {}, [className, cls[view]])}>
+		
+		<div className={classNames(cls.articleList, {}, [className, cls[view]])}>		
+			{/* <Virtuoso
+				style={{ height: '700px' }}
+				totalCount={articles.length}
+				itemContent={(index) => <ArticleListItem 
+					article={articles[index]} 
+					view={view} 
+					className={cls.card}
+					key={index}
+					target={target}
+				/>}
+			/> */}
+			
 			{articles.length > 0
 				? articles.map(renderArticle)
-				: null}
+				: null} 
 			{isLoading && getSkeletons(view)}
 		</div>
 	);
-});
+}); 

@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { ArticleList } from 'entities/Article';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
@@ -11,7 +10,6 @@ import { initArticlesPage } from '../../model/services/initArticlesPage/initArti
 import { articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
 import {
-	getArticlesPageError,
 	getArticlesPageIsLoading,
 	getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
@@ -29,12 +27,11 @@ const reducers: ReducersList = {
 
 const ArticlesPage = (props: ArticlesPageProps) => {
 	const { className } = props;
-	const { t } = useTranslation('article');
 	const dispatch = useAppDispatch();
 	const articles = useSelector(getArticles.selectAll);
 	const isLoading = useSelector(getArticlesPageIsLoading);
 	const view = useSelector(getArticlesPageView);
-	const error = useSelector(getArticlesPageError);
+	// const error = useSelector(getArticlesPageError);
 	const [searchParams] = useSearchParams();
 
 	const onLoadNextPart = useCallback(() => {

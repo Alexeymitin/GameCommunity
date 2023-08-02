@@ -11,6 +11,9 @@ export default ({ config }: {config: Configuration}) => {
 		html: '',
 		entry: '',
 		src: path.resolve(__dirname, '..', '..', 'src'),
+		// стоить указать путь до папки public
+		locales: '',
+		buildLocales: ''
 	};
 	config.resolve!.modules!.push(paths.src);
 	config.resolve!.extensions!.push('.ts', '.tsx');
