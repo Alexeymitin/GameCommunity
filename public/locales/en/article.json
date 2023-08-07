@@ -18,8 +18,10 @@
   "IT": "IT",
   "Economic": "Economic",
   "Science": "Science",
-  "Recommendations": "Recommendations",
+  "article.Recommendations": "Recommendations",
   "article.Back to list": "Back to list",
   "article.Edit": "Edit",
-  "Create Article": "Create Article"
+  "Create Article": "Create Article",
+  "article.Comments": "Comments",
+  "article.Error loading articles": "Error loading articles"
 }

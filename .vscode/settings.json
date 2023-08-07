@@ -4,5 +4,12 @@
 		"src/shared/config/i18n"
 	],
 	"i18n-ally.keystyle": "flat",
-	"liveServer.settings.port": 5501
+	"liveServer.settings.port": 5501,
+	"javascript.suggest.autoImports": true,
+	"typescript.suggest.autoImports": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true
+	}
 }

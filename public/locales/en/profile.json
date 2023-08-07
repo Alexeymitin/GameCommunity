@@ -15,5 +15,8 @@
   "Incorrect age": "Incorrect age",
   "Incorrect country": "Incorrect country",
   "Incorrect Firstname": "Incorrect Firstname",
-  "Incorrect data": "Incorrect data"
+  "Incorrect data": "Incorrect data",
+  "profile.Profile not found": "Profile not found",
+  "profile.Cancel": "Cancel",
+  "profile.Save": "Save"
 }

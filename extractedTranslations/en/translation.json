@@ -27,12 +27,21 @@
   "Enter Password": "Enter Password",
   "Enter Username": "Enter Username",
   "Enter comment text": "Enter comment text",
+  "Error": "Error",
+  "Error loading articles": "Error loading articles",
   "Hello": "Hello",
   "IT": "IT",
   "Incorrect Firstname": "Incorrect Firstname",
   "Incorrect age": "Incorrect age",
   "Incorrect country": "Incorrect country",
   "Incorrect data": "Incorrect data",
+  "Loading": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Log": "Log",
   "LogOut": "LogOut",
   "Login": "Login",
@@ -48,6 +57,7 @@
   "Nickname": "Nickname",
   "PAGE NOT FOUND": "PAGE NOT FOUND",
   "Profile": "Profile",
+  "Profile not found": "Profile not found",
   "Progile Page": "Progile Page",
   "Read": "",
   "Read more": "",

@@ -16,6 +16,7 @@ import {
 import { PageWrapper } from 'widgets/PageWrapper/PageWrapper';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { useSearchParams } from 'react-router-dom';
+import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 
 interface ArticlesPageProps {
     className?: string;
@@ -28,10 +29,6 @@ const reducers: ReducersList = {
 const ArticlesPage = (props: ArticlesPageProps) => {
 	const { className } = props;
 	const dispatch = useAppDispatch();
-	const articles = useSelector(getArticles.selectAll);
-	const isLoading = useSelector(getArticlesPageIsLoading);
-	const view = useSelector(getArticlesPageView);
-	// const error = useSelector(getArticlesPageError);
 	const [searchParams] = useSearchParams();
 
 	const onLoadNextPart = useCallback(() => {
@@ -49,12 +46,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 				className={classNames(cls.articlesPage, {}, [className])}
 			>
 				<ArticlesPageFilters/>
-				<ArticleList
-					isLoading={isLoading}
-					view={view}
-					articles={articles}
-					className={cls.list}
-				/>
+				<ArticleInfiniteList className={cls.list}/>
 			</PageWrapper>
 		</DynamicModuleLoader>
 	);

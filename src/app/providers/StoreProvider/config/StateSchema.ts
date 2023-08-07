@@ -2,20 +2,22 @@ import { AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject } f
 import { AxiosInstance } from 'axios';
 import { ArticleDetailsSchema } from 'entities/Article';
 import { CounterSchema } from 'entities/Counter';
-import { ProfileSchema } from 'entities/Profile';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
 import { addCommentFormSchema } from 'features/addCommentForm';
+import { ProfileSchema } from 'features/editableProfileCard';
 import { ScrollSaveSchema } from 'features/scrollSave';
 import { 
 	ArticleDetailsPageSchema, 
 } from 'pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
+import { rtkApi } from 'shared/api/rtkApi';
 
 export interface StateSchema {
 	counter: CounterSchema;
 	user: UserSchema;
 	scrollSave: ScrollSaveSchema;
+	[rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
 	// Async reducers
 	loginForm?: LoginSchema;
@@ -24,6 +26,7 @@ export interface StateSchema {
 	addCommentForm?: addCommentFormSchema;
 	articlesPage?: ArticlesPageSchema;
 	articleDetailsPage?: ArticleDetailsPageSchema;
+	
 }
 
 export type StateSchemaKey = keyof StateSchema;

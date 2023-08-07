@@ -18,8 +18,10 @@
   "IT": "Айти",
   "Economic": "Экономика",
   "Science": "Наука",
-  "Recommendations": "Рекомендации",
+  "article.Recommendations": "Рекомендации",
   "article.Edit": "Редактировать",
   "article.Back to list": "Назад к списку",
-  "Create Article": "Создать статью"
+  "Create Article": "Создать статью",
+  "article.Comments": "Комментарии",
+  "article.Error loading articles": "Ошибка при загрузке статей"
 }
