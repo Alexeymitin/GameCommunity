@@ -7,7 +7,7 @@ import { PageWrapper } from './PageWrapper';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
-	title: 'nameDirectory/PageWrapper',
+	title: 'widgets/PageWrapper',
 	component: PageWrapper,
 	argTypes: {
 		backgroundColor: { control: 'color' },
