@@ -1,26 +1,16 @@
 /* eslint-disable max-len */
-import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './ArticleDetailsPage.module.scss';
-import { useTranslation } from 'react-i18next';
-import { memo, useCallback } from 'react';
 import { ArticleDetails } from 'entities/Article';
+import { ArticleRecommendationsList } from 'features/articleRecommendationsList';
+import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
-import { Text, TextSize } from 'shared/ui/Text/Text';
-import { CommentList } from 'entities/Comment';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { getArticleComments } from '../../model/slices/articleDetailsCommentsSlice';
-import { useSelector } from 'react-redux';
-import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { fetchCommentByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
-import { AddCommentForm } from 'features/addCommentForm';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
 import { PageWrapper } from 'widgets/PageWrapper/PageWrapper';
 import { articleDetailsPageReducer } from '../../model/slices';
-import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
-import { ArticleRecommendationsList } from 'features/articleRecommendationsList';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
+import cls from './ArticleDetailsPage.module.scss';
 
 
 interface ArticleDetailsPageProps {

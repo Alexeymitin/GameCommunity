@@ -18,10 +18,14 @@
   "IT": "IT",
   "Economic": "Economic",
   "Science": "Science",
-  "article.Recommendations": "Recommendations",
-  "article.Back to list": "Back to list",
-  "article.Edit": "Edit",
+  "Recommendations": "Recommendations",
+  "Back to list": "Back to list",
+  "Edit": "Edit",
   "Create Article": "Create Article",
-  "article.Comments": "Comments",
-  "article.Error loading articles": "Error loading articles"
+  "Comments": "Comments",
+  "Error loading articles": "Error loading articles",
+  "PC": "PC",
+  "PS5": "PS5",
+  "Xbox": "Xbox",
+  "release date": "release date"
 }

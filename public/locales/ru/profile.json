@@ -17,8 +17,8 @@
   "Incorrect country": "Вы выбрали некорректную страну",
   "Incorrect Firstname": "Вы ввели некорректное имя",
   "Incorrect data": "Вы ввели некорректные данные",
-  "profile.Profile not found": "Профиль не найден",
-  "profile.Edit": "Редактировать",
-  "profile.Cancel": "Отмена",
-  "profile.Save": "Сохранить"
+  "Profile not found": "Профиль не найден",
+  "Edit": "Редактировать",
+  "Cancel": "Отмена",
+  "Save": "Сохранить"
 }

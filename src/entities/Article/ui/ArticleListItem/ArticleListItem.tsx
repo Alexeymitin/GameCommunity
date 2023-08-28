@@ -1,17 +1,17 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './ArticleListItem.module.scss';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Article, ArticleBlockType, ArticleTextBlock, ArticleView } from '../../model/types/article';
-import { Text } from 'shared/ui/Text/Text';
-import { Icon } from 'shared/ui/Icon/Icon';
 import EyeIcon from 'shared/assets/icons/eye.svg';
-import { Card } from 'shared/ui/Card/Card';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Card } from 'shared/ui/Card/Card';
+import { Icon } from 'shared/ui/Icon/Icon';
+import { Text } from 'shared/ui/Text/Text';
+import { Article, ArticleBlockType, ArticleTextBlock, ArticleView } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import { HTMLAttributeAnchorTarget, memo } from 'react';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import cls from './ArticleListItem.module.scss';
 
 interface ArticleListItemProps {
 	className?: string;
@@ -49,7 +49,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 					<div className={cls.header}>
 						<Avatar size={30} src={article.user.avatar}/>
 						<Text text={article.user.username} className={cls.username}/>
-						<Text text={article.createdAt} className={cls.date}/>
+						<Text text={article.releaseDate} className={cls.date}/>
 					</div>
 					<Text title={article.title} className={cls.title}/>
 					{types}
@@ -84,7 +84,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 			<Card className={cls.card}>
 				<div className={cls.imageWrapper}>
 					{image}
-					<Text text={article.createdAt} className={cls.date}/>
+					<Text text={article.releaseDate} className={cls.date}/>
 				</div>
 				<div className={cls.infoWrapper}>
 					{types}

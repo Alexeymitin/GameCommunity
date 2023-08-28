@@ -1,12 +1,12 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Theme } from 'app/providers/ThemeProvider';
+import { Article } from 'entities/Article';
+import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import {
 	ThemeDecorator
 } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
 import ArticleDetailsPage from './ArticleDetailsPage';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Article } from 'entities/Article';
-import { ArticleType, ArticleBlockType } from 'entities/Article/model/types/article';
 
 export default {
 	title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
@@ -24,9 +24,9 @@ const article: Article = {
 	subtitle: 'Что нового в JS за 2022 год?',
 	img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
 	views: 1022,
-	createdAt: '26.02.2022',
+	releaseDate: '26.02.2022',
 	type: [
-		ArticleType.IT
+		ArticleType.PC
 	],
 	user: {
 		id: '1',

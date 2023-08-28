@@ -18,10 +18,14 @@
   "IT": "Айти",
   "Economic": "Экономика",
   "Science": "Наука",
-  "article.Recommendations": "Рекомендации",
-  "article.Edit": "Редактировать",
-  "article.Back to list": "Назад к списку",
+  "Recommendations": "Рекомендации",
+  "Edit": "Редактировать",
+  "Back to list": "Назад к списку",
   "Create Article": "Создать статью",
-  "article.Comments": "Комментарии",
-  "article.Error loading articles": "Ошибка при загрузке статей"
+  "Comments": "Комментарии",
+  "Error loading articles": "Ошибка при загрузке статей",
+  "PC": "PC",
+  "PS5": "PS5",
+  "Xbox": "Xbox",
+  "release date": "Дата релиза"
 }

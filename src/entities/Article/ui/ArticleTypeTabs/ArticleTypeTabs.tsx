@@ -18,16 +18,16 @@ export const ArticleTypeTabs = memo(({className, value, onChangeType}: ArticleTy
 			content: t('All articles')
 		},
 		{
-			value: ArticleType.IT,
-			content: t('IT')
+			value: ArticleType.PC,
+			content: t('PC')
 		},
 		{
-			value: ArticleType.ECONOMICS,
-			content: t('Economic')
+			value: ArticleType.PS5,
+			content: t('PS5')
 		},
 		{
-			value: ArticleType.SCIENCE,
-			content: t('Science')
+			value: ArticleType.XBOX,
+			content: t('Xbox')
 		},
 	], [t]);
 
