@@ -93,7 +93,12 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
 			<div className={classNames('', {}, [className])}>
 				<EditableProfileCardHeader/>
 				{validateErrors?.length && validateErrors.map((err) => (
-					<Text theme={TextTheme.ERROR} text={validateErrorTranslates[err]} key={err}/>
+					<Text 
+						theme={TextTheme.ERROR} 
+						text={validateErrorTranslates[err]} 
+						key={err}
+						data-testid={'EditableProfileCard.Error'}
+					/>
 				))}
 				<ProfileCard
 					data={formData}
