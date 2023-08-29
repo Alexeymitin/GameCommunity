@@ -1,10 +1,10 @@
 import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/StoreProvider';
-import { Article, ArticleView, ArticleSortField, ArticleType } from 'entities/Article';
-import { ArticlesPageSchema } from '../types/articlesPageSchema';
+import { Article, ArticleSortField, ArticleType, ArticleView } from 'entities/Article';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
-import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { SortOrder } from 'shared/types';
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
+import { ArticlesPageSchema } from '../types/articlesPageSchema';
 
 const articlesAdapter = createEntityAdapter<Article>({
 	selectId: (article) => article.id,
@@ -47,7 +47,6 @@ const articlesPageSlice = createSlice({
 		},
 		setType: (state, action: PayloadAction<ArticleType>) => {
 			state.type = action.payload;
-			console.log(action.payload);
 		},
 		setSearch: (state, action: PayloadAction<string>) => {
 			state.search = action.payload;
@@ -64,6 +63,7 @@ const articlesPageSlice = createSlice({
 			.addCase(fetchArticlesList.pending, (state, action) => {
 				state.error = undefined;
 				state.isLoading = true;
+				state.hasMore = true;
 
 				if(action.meta.arg.replace) {
 					articlesAdapter.removeAll(state);
