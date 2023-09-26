@@ -4,6 +4,7 @@ import { getUserAuthData } from './model/selectors/getUserAuthData/getUserAuthDa
 import { getUserInited } from './model/selectors/getUserInited/getUserInited';
 import { UserRole } from './model/types/user';
 import { isUserAdmin, isUserManager } from './model/selectors/roleSelectors';
+import { getUserRoles } from './model/selectors/roleSelectors';
 
 export {
 	userReducer,
@@ -14,5 +15,6 @@ export {
 	getUserAuthData,
 	getUserInited,
 	isUserAdmin,
-	isUserManager
+	isUserManager,
+	getUserRoles
 };

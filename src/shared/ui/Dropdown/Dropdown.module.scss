@@ -1,5 +1,6 @@
 .dropdown {
 	position: relative;
+	z-index: 100
 }
 
 .btn {
@@ -12,13 +13,13 @@
 }
 
 .menu {
-	background: var(--card-bg);
+	background: var(--secondary-color);
 	position: absolute;
-	z-index: 10000;
 	border-radius: 8px;
 	border: 1px solid var(--primary-color);
 	flex-direction: column;
 	display: flex;
+	z-index: 100
 }
 
 .item {

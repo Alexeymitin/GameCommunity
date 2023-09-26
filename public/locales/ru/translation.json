@@ -20,5 +20,6 @@
   "Create Article": "Создать Статью",
   "Profile": "Профиль",
   "Admin Panel": "Админ панель",
-  "Admin": "Админ"
+  "Admin": "Админ",
+  "ForbiddenPage": "У вас нет доступа"
 }
