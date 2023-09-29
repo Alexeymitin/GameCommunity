@@ -1,23 +1,24 @@
-import { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
-import { Article, ArticleView, ArticleSortField, ArticleType } from './model/types/article';
-import type { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
+import { ArticleSortField, ArticleType, ArticleView } from './model/consts/articleConsts';
 import { getArticleDetailsData } from './model/selector/getArticleDetailsData/getArticleDetailsData';
+import type { Article } from './model/types/article';
+import type { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
+import { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
 import { ArticleList } from './ui/ArticleList/ArticleList';
-import { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
 import { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
 import { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
+import { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
 
 
 export {
-	ArticleDetails,
-	ArticleList,
-	Article,
-	ArticleView,
-	ArticleDetailsSchema,
-	getArticleDetailsData,
-	ArticleViewSelector,
+	ArticleDetails, 
+	ArticleDetailsSchema, 
+	ArticleList, 
 	ArticleSortField,
 	ArticleSortSelector,
 	ArticleType,
-	ArticleTypeTabs
+	ArticleTypeTabs, 
+	ArticleView, 
+	ArticleViewSelector, 
+	getArticleDetailsData, 
+	type Article
 };

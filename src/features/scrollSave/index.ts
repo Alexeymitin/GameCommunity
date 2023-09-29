@@ -3,7 +3,7 @@ import { getScrollByPath } from './model/selectors/getScroll';
 import { scrollSaveActions, scrollSaveReducer } from './model/slices/scrollSaveSlice';
 
 export {
-	ScrollSaveSchema,
+	type ScrollSaveSchema,
 	getScrollByPath,
 	scrollSaveActions,
 	scrollSaveReducer

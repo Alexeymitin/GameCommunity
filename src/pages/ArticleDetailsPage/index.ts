@@ -6,8 +6,8 @@ import { articleDetailsPageReducer } from './model/slices';
 
 export {
 	ArticleDetailsPageAsync as ArticleDetailsPage,
-	ArticleDetailsCommentsSchema,
-	ArticleDetailsRecommendationsSchema,
-	ArticleDetailsPageSchema,
+	type ArticleDetailsCommentsSchema,
+	type ArticleDetailsRecommendationsSchema,
+	type ArticleDetailsPageSchema,
 	articleDetailsPageReducer
 };
