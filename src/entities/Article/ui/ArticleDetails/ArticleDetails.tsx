@@ -1,29 +1,29 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './ArticleDetails.module.scss';
-import { useTranslation } from 'react-i18next';
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import { memo, useCallback, useEffect } from 'react';
-import { fetchArticleByID } from '../../model/services/fetchArticleById/fetchArticleById';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { getArticleDetailsIsLoading } from '../../model/selector/getArticleDetailsIsLoading/getArticleDetailsIsLoading';
-import { getArticleDetailsError } from '../../model/selector/getArticleDetailsError/getArticleDetailsError';
-import { getArticleDetailsData } from '../../model/selector/getArticleDetailsData/getArticleDetailsData';
-import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text';
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import EyeIcon from 'shared/assets/icons/eye.svg';
 import ECalendarIcon from 'shared/assets/icons/calendar.svg';
+import EyeIcon from 'shared/assets/icons/eye.svg';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Icon } from 'shared/ui/Icon/Icon';
+import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text';
+import { getArticleDetailsData } from '../../model/selector/getArticleDetailsData/getArticleDetailsData';
+import { getArticleDetailsError } from '../../model/selector/getArticleDetailsError/getArticleDetailsError';
+import { getArticleDetailsIsLoading } from '../../model/selector/getArticleDetailsIsLoading/getArticleDetailsIsLoading';
+import { fetchArticleByID } from '../../model/services/fetchArticleById/fetchArticleById';
+import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import cls from './ArticleDetails.module.scss';
 
 interface ArticleDetailsProps {
 	className?: string;
-	id: string;
+	id?: string;
 }
 
 const reducers: ReducersList = {

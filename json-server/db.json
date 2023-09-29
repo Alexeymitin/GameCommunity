@@ -523,6 +523,12 @@
       "userId": "1",
       "text": "ывфывфв",
       "id": "fJEnamH"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "comment 2",
+      "id": "rfjYfzH"
     }
   ],
   "users": [
@@ -559,7 +565,7 @@
       "id": "1",
       "first": "Alexey",
       "lastname": "Mitin",
-      "age": 32,
+      "age": 31,
       "currency": "USD",
       "country": "Russia",
       "city": "Moscow",

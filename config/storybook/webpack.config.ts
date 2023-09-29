@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { Configuration, DefinePlugin, RuleSetRule } from 'webpack';
 import path from 'path';
-import { BuildPaths } from '../build/types/config';
+import { Configuration, DefinePlugin, RuleSetRule } from 'webpack';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
+import { BuildPaths } from '../build/types/config';
 
 
 export default ({ config }: {config: Configuration}) => {
@@ -39,7 +39,7 @@ export default ({ config }: {config: Configuration}) => {
 
 	config!.plugins!.push(new DefinePlugin({
 		__IS_DEV__: JSON.stringify(true),
-		__API__: JSON.stringify(''),
+		__API__: JSON.stringify('https://testapi.ru'),
 		__PROJECT__: JSON.stringify('storybook')
 	}));
 
