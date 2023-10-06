@@ -9,6 +9,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
+import CircularDependencyPlugin from 'circular-dependency-plugin';
 
 export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
 	
@@ -32,6 +33,10 @@ export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
 			patterns: [
 				{from: paths.locales, to: paths.buildLocales}
 			]
+		}),
+		new CircularDependencyPlugin ({
+			exclude: /node_modules/,
+			failOnError: true,
 		})
 	];
 
