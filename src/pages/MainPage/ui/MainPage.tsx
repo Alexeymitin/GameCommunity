@@ -7,7 +7,7 @@ import img2 from '../../../shared/assets/img/MainImage2.jpg';
 import img3 from '../../../shared/assets/img/MainImage3.jpg';
 import cls from './MainPage.module.scss';
 
-const images = [
+const imagesMain = [
 	<img src={img1} alt="Cyberpank News" key={img1}/>,
 	<img src={img2} alt="PayDay News" key={img2}/>,
 	<img src={img3} alt="Shank News" key={img3}/>,
@@ -24,8 +24,9 @@ const MainPage = () => {
 				<Text title={t('Popular News')}/>									
 			</div>	
 			<Carousel 
-				slides={images}
+				slides={imagesMain}
 				className={cls.sliderBig}
+				isAutoplay
 			/>				
 		</PageWrapper>
 	);

@@ -1,15 +1,15 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
 import { Article, ArticleType } from 'entities/Article';
-import { 
-	getArticlesPageLimit, 
-	getArticlesPageNum, 
-	getArticlesPageOrder, 
-	getArticlesPageSearch, 
-	getArticlesPageSort, 
+import { addQueryParams } from 'shared/lib/url/addQueryParams/addQueryParams';
+import {
+	getArticlesPageLimit,
+	getArticlesPageNum,
+	getArticlesPageOrder,
+	getArticlesPageSearch,
+	getArticlesPageSort,
 	getArticlesPageType
 } from '../../selectors/articlesPageSelectors';
-import { addQueryParams } from 'shared/lib/url/addQueryParams/addQueryParams';
 
 interface FetchArticlesListProps {
 	replace?: boolean;

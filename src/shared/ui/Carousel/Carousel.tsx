@@ -39,7 +39,7 @@ export const Carousel = (props: CarouselProps) => {
 				}}
 				speed={1000}
 				grabCursor
-				autoplay
+				autoplay={isAutoplay ? true : false}
 				navigation={{
 					prevEl: `.${cls.backArrow}`,
 					nextEl: `.${cls.nextArrow}`					
