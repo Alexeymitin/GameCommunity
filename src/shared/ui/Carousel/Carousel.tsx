@@ -1,11 +1,7 @@
-import { getSlidesChangerIndex } from 'features/sliderChanger/model/selectors/addCommentFormSelectors';
-import { slideChangerSliceActions } from 'features/sliderChanger/model/slices/slidesChangerSlice';
 import { CarouselItem } from 'features/sliderChanger/model/types/slidesChangerSchema';
-import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
@@ -28,38 +24,6 @@ export const Carousel = (props: CarouselProps) => {
 		...otherProps
 	} = props;
 
-	// const styles: CSSProperties = {
-	// 	width,
-	// 	height
-	// };
-
-	const dispatch = useAppDispatch();
-	const currentIndex = useSelector(getSlidesChangerIndex);
-	const swiper = useSwiper();
-
-	// useEffect(() => {
-	// 	let interval: NodeJS.Timeout;
-	// 	if (isAutoplay) {
-	// 		interval = setInterval(() => dispatch(slideChangerSliceActions.nextImage()), 3000);
-	// 	}
-	// 	return () => clearInterval(interval);
-	// }, [isAutoplay, dispatch]);
-
-	// useEffect(() => {
-	// 	dispatch(slideChangerSliceActions.setImage(slides));
-	// }, [dispatch, slides]);
-
-	const prevSlide = () => {
-		dispatch(slideChangerSliceActions.prevImage());
-	};
-
-	const nextSlide = () => {
-		dispatch(slideChangerSliceActions.nextImage());
-	};
-
-	console.log(cls.backArrow);
-	console.log(cls.nextArrow);
-
 	return (
 		<div 
 			className={classNames(cls.carouselWrapper, {}, [className])}
@@ -72,19 +36,10 @@ export const Carousel = (props: CarouselProps) => {
 				pagination={{
 					el: `.${cls.swiperPagination}`,
 					clickable: true,
-					renderBullet: function (index, className) {
-						if(className.includes('.swiper-pagination-bullet-active')) {
-							return '<span class="' + className + '" style="width: 20px">' + (index + 1) + '</span>';
-						} else {
-							return '<span class="' + className + '"></span>';
-						}					
-					}
-						
-					// dynamicBullets: true
 				}}
 				speed={1000}
 				grabCursor
-				// autoplay
+				autoplay
 				navigation={{
 					prevEl: `.${cls.backArrow}`,
 					nextEl: `.${cls.nextArrow}`					
