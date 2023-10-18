@@ -1,4 +1,4 @@
-import { ArticleView } from 'entities/Article/model/consts/articleConsts';
+import { ArticleView } from '../../model/consts/articleConsts';
 import { memo } from 'react';
 import ListIcon from 'shared/assets/icons/list.svg';
 import PlateIcon from 'shared/assets/icons/plate.svg';

@@ -1,4 +1,4 @@
-import { ArticleBlockType } from 'entities/Article/model/consts/articleConsts';
+import { ArticleBlockType } from '../../model/consts/articleConsts';
 import { memo, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
@@ -50,9 +50,10 @@ export const ArticleDetails = memo(({className, id}: ArticleDetailsProps) => {
 			return null;
 		}
 	}, []);
-
+	
 	useEffect(() => {
 		if(__PROJECT__ !== 'storybook') {
+			
 			dispatch(fetchArticleByID(id));
 		}
 	},[dispatch, id]);

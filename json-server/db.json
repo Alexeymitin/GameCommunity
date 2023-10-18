@@ -189,12 +189,12 @@
           ]
         },
         {
-          "id": "4",
+          "id": "2",
           "type": "CODE",
           "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
         },
         {
-          "id": "2",
+          "id": "3",
           "type": "IMAGE",
           "src": "https://cdn.akamai.steamstatic.com/steam/apps/1244090/extras/steam-feature-combat.png?t=1692718109",
           "title": "Image"

@@ -1,9 +1,9 @@
 /* eslint-disable i18next/no-literal-string */
-import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './NotFoundPage.module.scss';
 import { useTranslation } from 'react-i18next';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { PageWrapper } from 'widgets/PageWrapper/PageWrapper';
-// import Logo from '../../../shared/assets/img/logo.png';
+import Logo from '../../../shared/assets/img/logo.png';
+import cls from './NotFoundPage.module.scss';
 
 
 interface NotFoundPageProps {
@@ -17,7 +17,7 @@ export const NotFoundPage = ({className}: NotFoundPageProps) => {
 	return (
 		<PageWrapper className={classNames(cls.notFoundPage, {}, [className])}>
 			<div className={classNames(cls.wrapper, {}, [className])}>
-				{/* <img src={Logo} alt="logo" /> */}
+				<img src={Logo} alt="logo" />
 				<h1>TeamHost</h1>
 			</div>
 			<h2>{t('PAGE NOT FOUND')}</h2>

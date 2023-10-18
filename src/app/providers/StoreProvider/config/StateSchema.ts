@@ -7,6 +7,7 @@ import { LoginSchema } from 'features/AuthByUsername';
 import { addCommentFormSchema } from 'features/addCommentForm';
 import { ProfileSchema } from 'features/editableProfileCard';
 import { ScrollSaveSchema } from 'features/scrollSave';
+import { SlidesChangerSchema } from 'features/sliderChanger/model/types/slidesChangerSchema';
 import { 
 	ArticleDetailsPageSchema, 
 } from 'pages/ArticleDetailsPage';
@@ -17,6 +18,7 @@ export interface StateSchema {
 	counter: CounterSchema;
 	user: UserSchema;
 	scrollSave: ScrollSaveSchema;
+	slidesChanger: SlidesChangerSchema;
 	[rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
 	// Async reducers
