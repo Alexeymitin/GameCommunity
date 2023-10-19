@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { KeyboardEventHandler, memo, useCallback, KeyboardEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -48,13 +48,18 @@ const LoginForm = memo(({className, onSuccess}: LoginFormProps) => {
 		}
 	}, [onSuccess, dispatch, password, username]);
 
+	const onKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+		if(e.key === 'Enter') {
+			onLoginClick();
+		}
+	};
 
 	return (
 		<DynamicModuleLoader 
 			reducers={initialReducers}
 			removeAfterUnmount
 		>
-			<div className={classNames(cls.loginForm, {}, [className])}>
+			<div className={classNames(cls.loginForm, {}, [className])} onKeyDown={onKeyDown}>
 				<Text title={t('Authorization form')}/>
 				{error && <Text text={t('Wrong login or password')} theme={TextTheme.ERROR}/>}
 				<Input 
@@ -76,7 +81,7 @@ const LoginForm = memo(({className, onSuccess}: LoginFormProps) => {
 					className={cls.loginBtn} 
 					theme={ButtonTheme.OUTLINE}
 					onClick={onLoginClick}
-					disabled={isLoading}
+					disabled={isLoading}	
 				>
 					{t('Login')}
 				</Button>

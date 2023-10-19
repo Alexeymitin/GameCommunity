@@ -3,15 +3,6 @@
 	z-index: 100
 }
 
-.btn {
-	background: none;
-	outline: none;
-	margin: 0;
-	padding: 0;
-	border: none;
-	cursor: pointer;
-}
-
 .menu {
 	background: var(--secondary-color);
 	position: absolute;
@@ -35,24 +26,4 @@
 .active {
 	color: var(--color-focused);
 	background-color: var(--color-hover);
-}
-
-.optionsBottomLeft {
-	top: 100%;
-	right: 0;
-}
-
-.optionsBottomRight {
-	top: 100%;
-	left: 0;
-}
-
-.optionsTopRight {
-	bottom: 100%;
-	left: 0;
-}
-
-.optionsTopLeft {
-	right: 0;
-	bottom: 100%;
 }

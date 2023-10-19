@@ -57,12 +57,14 @@ button {
 }
 
 *::-webkit-scrollbar-track {
-	background-color: #E2EBEC;;        /* цвет дорожки */
+	background-color: #E2EBEC;  /* цвет дорожки */
+	border-radius: 12px;   
+	margin: 1px;  
 }
 
 *::-webkit-scrollbar-thumb {
 	background-color: #F46119;    /* цвет плашки */
-	// border-radius: 20px;       /* закругления плашки */
-	// border: 2px solid var(--primary-color);  /* padding вокруг плашки */
+	border-radius: 12px;        /* закругления плашки */
+	// border: 2px solid var(--primary-color);  
 }
 

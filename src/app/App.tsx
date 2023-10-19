@@ -1,15 +1,15 @@
 /* eslint-disable max-len */
-import './styles/index.scss';
-import { Navbar } from 'widgets/Navbar';
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { AppRouter } from 'app/providers/router';
+import { getUserInited, userActions } from 'entities/User';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
-import { Sidebar } from 'widgets/Sidebar';
 import { Suspense, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { getUserInited, userActions } from 'entities/User';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Navbar } from 'widgets/Navbar/ui/Navbar';
+import { Sidebar } from 'widgets/Sidebar';
+import './styles/index.scss';
 
 const App = () => {
 	const {theme} = useTheme();
