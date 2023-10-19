@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import {
-    ThemeDecorator
+	ThemeDecorator
 } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { NotificationList } from './NotificationList';
 
