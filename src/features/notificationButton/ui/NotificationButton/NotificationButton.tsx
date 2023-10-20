@@ -8,6 +8,7 @@ import { Drawer } from 'shared/ui/Drawer/Drawer';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { Popover } from 'shared/ui/Popups';
 import cls from './NotificationButton.module.scss';
+import { AnimationProvider } from 'shared/lib/components/AnimationProvider';
 
 interface NotificationButtonProps {
 	className?: string;
@@ -30,23 +31,36 @@ export const NotificationButton = ({className}: NotificationButtonProps) => {
 		</Button>
 	);
 
-	if(isMobile) {
-		return (
-			<div>
-				{trigger}
-				<Drawer isOpen={isOpen} onClose={onCloseDrawer}>
-					<NotificationList/>
-				</Drawer>;
-			</div>		
-		);		
-	}
+	// if(isMobile) {
+	// 	return (
+	// 		<div>
+	// 			{trigger}
+	// 			<Drawer isOpen={isOpen} onClose={onCloseDrawer}>
+	// 				<NotificationList/>
+	// 			</Drawer>;
+	// 		</div>		
+	// 	);		
+	// }
 
 	return (
-		<Popover 
-			className={classNames(cls.notificationButton, {}, [className])}
-			direction={'bottom left'}
-			trigger={trigger}>
-			<NotificationList className={cls.notifications}/>
-		</Popover>
+		<div>
+			<BrowserView>
+				<Popover
+					className={classNames(cls.notificationButton, {}, [className])}
+					direction="bottom left"
+					trigger={trigger}
+				>
+					<NotificationList className={cls.notifications} />
+				</Popover>
+			</BrowserView>
+			<MobileView>
+				{trigger}
+				<AnimationProvider>
+					<Drawer isOpen={isOpen} onClose={onCloseDrawer}>
+						<NotificationList />
+					</Drawer>
+				</AnimationProvider>
+			</MobileView>
+		</div>
 	);
 };
