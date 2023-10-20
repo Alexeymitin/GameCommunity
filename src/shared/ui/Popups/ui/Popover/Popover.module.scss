@@ -3,11 +3,11 @@
 }
 
 .panel {
-	background: var(--secondary-color);
+	background: var(--bg-color);
 	position: absolute;
 	border-radius: 8px;
 	border: 1px solid var(--primary-color);
 	flex-direction: column;
 	display: flex;
-	z-index: 100
+	z-index: var(--modal-z-index);
 }
