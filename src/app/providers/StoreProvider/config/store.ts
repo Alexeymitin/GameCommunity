@@ -6,7 +6,7 @@ import { createReducerManager } from './reducerManager';
 import { $api } from 'shared/api/api';
 import { scrollSaveReducer } from 'features/scrollSave';
 import { rtkApi } from 'shared/api/rtkApi';
-import { slideChangerSliceReducer } from 'features/sliderChanger/model/slices/slidesChangerSlice';
+import { burgerSliceReducer } from 'shared/ui/Burger';
 
 export function createReduxStore(
 	initialState?: StateSchema, 
@@ -18,7 +18,7 @@ export function createReduxStore(
 		counter: counterReducer,
 		user: userReducer,
 		scrollSave: scrollSaveReducer,
-		slidesChanger: slideChangerSliceReducer,
+		burger: burgerSliceReducer,
 		[rtkApi.reducerPath]: rtkApi.reducer,
 	};
 

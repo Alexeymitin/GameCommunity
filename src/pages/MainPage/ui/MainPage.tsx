@@ -17,17 +17,26 @@ const MainPage = () => {
 
 	const {t} = useTranslation('main');
 
-
 	return (
 		<PageWrapper>
-			<div className={cls.headers}>
-				<Text title={t('Popular News')}/>									
-			</div>	
-			<Carousel 
-				slides={imagesMain}
-				className={cls.sliderBig}
-				isAutoplay
-			/>				
+			<div>
+				<div>
+					<Text title={t('Popular News')}/>
+					<Carousel 
+						slides={imagesMain}
+						className={cls.sliderBig}
+						isAutoplay
+					/>	
+				</div>
+				<div>
+					<Text title={t('Trending Now')}/>	
+					<Carousel 
+						slides={imagesMain}
+						className={cls.sliderBig}
+						isAutoplay
+					/>	
+				</div>	
+			</div>							
 		</PageWrapper>
 	);
 };

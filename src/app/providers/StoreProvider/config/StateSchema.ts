@@ -7,18 +7,18 @@ import { LoginSchema } from 'features/AuthByUsername';
 import { addCommentFormSchema } from 'features/addCommentForm';
 import { ProfileSchema } from 'features/editableProfileCard';
 import { ScrollSaveSchema } from 'features/scrollSave';
-import { SlidesChangerSchema } from 'features/sliderChanger/model/types/slidesChangerSchema';
 import { 
 	ArticleDetailsPageSchema, 
 } from 'pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { rtkApi } from 'shared/api/rtkApi';
+import { BurgerSchema } from 'shared/ui/Burger';
 
 export interface StateSchema {
 	counter: CounterSchema;
 	user: UserSchema;
 	scrollSave: ScrollSaveSchema;
-	slidesChanger: SlidesChangerSchema;
+	burger: BurgerSchema;
 	[rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
 	// Async reducers

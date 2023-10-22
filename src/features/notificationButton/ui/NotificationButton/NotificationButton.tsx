@@ -1,6 +1,6 @@
 import { NotificationList } from 'entities/Notification';
 import { useCallback, useState } from 'react';
-import { BrowserView, MobileView, isMobile } from 'react-device-detect';
+import { BrowserView, MobileView } from 'react-device-detect';
 import NotificationIcon from 'shared/assets/icons/notification-20-20.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
@@ -8,7 +8,6 @@ import { Drawer } from 'shared/ui/Drawer/Drawer';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { Popover } from 'shared/ui/Popups';
 import cls from './NotificationButton.module.scss';
-import { AnimationProvider } from 'shared/lib/components/AnimationProvider';
 
 interface NotificationButtonProps {
 	className?: string;
@@ -30,17 +29,6 @@ export const NotificationButton = ({className}: NotificationButtonProps) => {
 			<Icon Svg={NotificationIcon}/>
 		</Button>
 	);
-
-	// if(isMobile) {
-	// 	return (
-	// 		<div>
-	// 			{trigger}
-	// 			<Drawer isOpen={isOpen} onClose={onCloseDrawer}>
-	// 				<NotificationList/>
-	// 			</Drawer>;
-	// 		</div>		
-	// 	);		
-	// }
 
 	return (
 		<div>
