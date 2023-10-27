@@ -4,7 +4,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Carousel } from 'shared/ui/Carousel/Carousel';
-import { Text } from 'shared/ui/Text/Text';
+import { Text, TextSize } from 'shared/ui/Text/Text';
 import { PageWrapper } from 'widgets/PageWrapper/PageWrapper';
 import img1 from '../../../shared/assets/img/t1.jpg';
 import img2 from '../../../shared/assets/img/t2.jpg';
@@ -46,7 +46,7 @@ const MainPage = () => {
 			<PageWrapper>							
 				<div className={cls.mainWrapper}>
 					<div className={cls.popularNewsCarouselWrapper}>
-						<Text title={t('Popular News')} className={cls.title}/>
+						<Text title={t('Popular News')} className={cls.title} size={TextSize.L}/>
 						<Carousel 
 							keyForPrevButton='popularNewsBack'
 							keyForNextButton='popularNewsNext'
@@ -57,7 +57,7 @@ const MainPage = () => {
 						/>	
 					</div>
 					<div className={cls.trendingNowCarouselWrapper}>
-						<Text title={t('Trending Now')} className={cls.title}/>	
+						<Text title={t('Trending Now')} className={cls.title}  size={TextSize.L}/>	
 						<Carousel 							
 							articles={articles}
 							className={cls.sliderTrendingNow}
@@ -68,7 +68,7 @@ const MainPage = () => {
 						/>
 					</div>
 					<div className={cls.mostPopularCarouselWrapper}>
-						<Text title={t('Most Popular')} className={cls.title}/>	
+						<Text title={t('Most Popular')} className={cls.title} size={TextSize.L}/>	
 						<Carousel 
 							slidesPerView={3}
 							keyForPrevButton='mostPopularBack'
