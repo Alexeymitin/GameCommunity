@@ -1,3 +1,4 @@
+import { MainPage } from 'pages/MainPage';
 import { AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
 import { ArticleDetailsSchema } from 'entities/Article';
@@ -13,6 +14,7 @@ import {
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { rtkApi } from 'shared/api/rtkApi';
 import { BurgerSchema } from 'shared/ui/Burger';
+import { MainPageSchema } from 'pages/MainPage/model/types/mainPageSchema';
 
 export interface StateSchema {
 	counter: CounterSchema;
@@ -27,6 +29,7 @@ export interface StateSchema {
 	articleDetails?: ArticleDetailsSchema;
 	addCommentForm?: addCommentFormSchema;
 	articlesPage?: ArticlesPageSchema;
+	mainPage?: MainPageSchema;
 	articleDetailsPage?: ArticleDetailsPageSchema;
 	
 }

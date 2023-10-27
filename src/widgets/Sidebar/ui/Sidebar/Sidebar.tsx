@@ -5,13 +5,13 @@ import { useSelector } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { burgerSliceActions, getBurgerIsOpen } from 'shared/ui/Burger';
 import { Burger } from 'shared/ui/Burger/ui/Burger';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { Overlay } from 'shared/ui/Overlay/Overlay';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import cls from './Sidebar.module.scss';
-import { burgerSliceActions, getBurgerIsOpen } from 'shared/ui/Burger';
 
 interface SidebarProps {
 	className?: string;
@@ -66,7 +66,7 @@ export const Sidebar = memo(({className}: SidebarProps) => {
 							)}
 							ref={nodeRef}
 						>					
-							<div className={cls.items}>
+							<div className={cls.items} onClick={onToggleMobileSidebar}>
 								{itemsList}
 							</div>
 							<div className={cls.switchers}>

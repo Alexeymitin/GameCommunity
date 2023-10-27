@@ -31,7 +31,7 @@ export const ArticleDetailsComments = ({className, id}: ArticleDetailsCommentsPr
 	useInitialEffect(() => {
 		dispatch(fetchCommentByArticleId(id));
 	});
-
+	
 	return (
 		<div className={classNames('', {}, [className])}>
 			<Text

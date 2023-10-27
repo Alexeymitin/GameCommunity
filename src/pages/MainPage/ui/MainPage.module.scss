@@ -1,0 +1,45 @@
+/* stylelint-disable media-feature-range-notation */
+.mainWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	transition: all 0.25s linear;
+}
+
+.popularNewsCarouselWrapper {
+	max-width: 100%;
+	width: 100%;
+	padding-right: 40px;
+}
+
+.title {
+	margin-bottom: 17px;
+}
+
+.trendingNowCarouselWrapper {
+	width: 100%;
+	max-width: 100%;
+}
+
+.mostPopularCarouselWrapper {
+	width: 100%;
+	max-width: 100%;
+	margin-top: 30px;
+}
+
+@media (min-width: 1200px) {
+	// .mainWrapper>* {
+	// 	padding-left: 40px;
+	// }
+
+	.popularNewsCarouselWrapper {
+		width: 66%;
+	}
+
+	.trendingNowCarouselWrapper {
+		width: 33%;
+	}
+
+	.mostPopularCarouselWrapper {
+		margin-top: 40px;
+	}
+}

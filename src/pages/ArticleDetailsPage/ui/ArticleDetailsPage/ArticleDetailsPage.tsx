@@ -11,6 +11,8 @@ import { articleDetailsPageReducer } from '../../model/slices';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import cls from './ArticleDetailsPage.module.scss';
+import { getUserAuthData } from 'entities/User';
+import { useSelector } from 'react-redux';
 
 
 interface ArticleDetailsPageProps {
@@ -24,6 +26,7 @@ const reducers: ReducersList = {
 const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
 	const {t} = useTranslation('article');
 	const {id} = useParams<{id: string}>();
+	const isAuth = useSelector(getUserAuthData);
 
 	return (
 		<DynamicModuleLoader reducers={reducers} removeAfterUnmount>
@@ -31,7 +34,7 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
 				<ArticleDetailsPageHeader/>		
 				<ArticleDetails id={id}/>
 				<ArticleRecommendationsList/>
-				<ArticleDetailsComments id={id}/>
+				{isAuth && <ArticleDetailsComments id={id}/>}
 			</PageWrapper>
 		</DynamicModuleLoader>
 	);
