@@ -26,7 +26,7 @@ export const NotificationButton = ({className}: NotificationButtonProps) => {
 
 	const trigger = (
 		<Button onClick={onOpenDrawer} theme={ButtonTheme.CLEAR}>
-			<Icon Svg={NotificationIcon}/>
+			<Icon Svg={NotificationIcon} className={cls.notificationIcon}/>
 		</Button>
 	);
 

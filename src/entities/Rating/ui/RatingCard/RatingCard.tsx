@@ -3,7 +3,7 @@ import { memo, useCallback, useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import { Card } from 'shared/ui/Card/Card';
 import { HStack, VStack } from 'shared/ui/Stack';
-import { Text } from 'shared/ui/Text/Text';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { StarRating } from 'shared/ui/StarRating/StarRating';
 import { Modal } from 'shared/ui/Modal/Modal';
 import { Input } from 'shared/ui/Input/Input';
@@ -70,7 +70,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
 	return (
 		<Card className={className}>
 			<VStack align="center" gap="8" max>
-				<Text title={starsCount ? t('Спасибо за оценку!') : title} />
+				<Text theme={TextTheme.INVERTED} title={starsCount ? t('Спасибо за оценку!') : title} />
 				<StarRating selectedStars={starsCount} size={40} onSelect={onSelectStars} />
 			</VStack>
 			<BrowserView>

@@ -4,3 +4,9 @@
 	width: 500px;
 	overflow-y: auto;
 }
+
+.notificationIcon {
+	&:hover {
+		fill: var(--color-focused);
+	}
+}

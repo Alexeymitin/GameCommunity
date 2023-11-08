@@ -13,6 +13,7 @@ import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDet
 import cls from './ArticleDetailsPage.module.scss';
 import { getUserAuthData } from 'entities/User';
 import { useSelector } from 'react-redux';
+import { ArticleRating } from 'features/articleRating';
 
 
 interface ArticleDetailsPageProps {
@@ -28,11 +29,16 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
 	const {id} = useParams<{id: string}>();
 	const isAuth = useSelector(getUserAuthData);
 
+	if (!id) {
+		return null;
+	}
+
 	return (
 		<DynamicModuleLoader reducers={reducers} removeAfterUnmount>
 			<PageWrapper className={classNames(cls.articleDetailsPage, {}, [className])}>
 				<ArticleDetailsPageHeader/>		
 				<ArticleDetails id={id}/>
+				<ArticleRating articleId={id}/>
 				<ArticleRecommendationsList/>
 				{isAuth && <ArticleDetailsComments id={id}/>}
 			</PageWrapper>
