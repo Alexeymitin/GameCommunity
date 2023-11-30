@@ -38,12 +38,12 @@ export const getSidebarItems = createSelector(
 					text: 'Profile Page',
 					authOnly: true
 				},
-				{
-					path: RoutePath.article_create,
-					Icon: CreateIcon,
-					text: 'Create Article',
-					authOnly: true
-				},
+				// {
+				// 	path: RoutePath.article_create,
+				// 	Icon: CreateIcon,
+				// 	text: 'Create Article',
+				// 	authOnly: true
+				// },
 			);
 		}
 

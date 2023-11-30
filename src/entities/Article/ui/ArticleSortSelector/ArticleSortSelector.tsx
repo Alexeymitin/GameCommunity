@@ -1,4 +1,4 @@
-import { ArticleSortField } from 'entities/Article/model/consts/articleConsts';
+import { ArticleSortField } from '../../model/consts/articleConsts';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';

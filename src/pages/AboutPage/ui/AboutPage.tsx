@@ -8,7 +8,9 @@ const AboutPage = () => {
 
 	return (
 		<PageWrapper>
-			{t('About Page')}
+			{t(`Новостная лента с личным кабинетом, статьями и рейтингом статей. 
+				В проекте использованы React, Typescript, Redux, Webpack, Babel.`
+			)}
 		</PageWrapper>
 	);
 };
