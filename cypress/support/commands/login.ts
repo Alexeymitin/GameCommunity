@@ -12,3 +12,4 @@ export const login = (username: string = 'admin', password: string = '123') => {
 		window.localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(body));
 	});
 };
+ 
