@@ -11,7 +11,7 @@ const ProfilePage = ({className}: ProfilePageProps) => {
 	const {id} = useParams<{id: string}>();
 
 	return (
-		<PageWrapper className={classNames('', {}, [className])}>				
+		<PageWrapper data-testid="ProfilePage" className={classNames('', {}, [className])}>				
 			<EditableProfileCard id={id}/>
 		</PageWrapper>
 	);

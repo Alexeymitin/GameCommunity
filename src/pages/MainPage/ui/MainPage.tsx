@@ -43,7 +43,7 @@ const MainPage = () => {
 
 	return (
 		<DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
-			<PageWrapper>							
+			<PageWrapper data-testid="MainPage">							
 				<div className={cls.mainWrapper}>
 					<div className={cls.popularNewsCarouselWrapper}>
 						<Text title={t('Popular News')} className={cls.title} size={TextSize.L}/>

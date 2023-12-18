@@ -15,7 +15,7 @@ export const NotFoundPage = ({className}: NotFoundPageProps) => {
 	const {t} = useTranslation();
 
 	return (
-		<PageWrapper className={classNames(cls.notFoundPage, {}, [className])}>
+		<PageWrapper data-testid="NotFoundPage" className={classNames(cls.notFoundPage, {}, [className])}>
 			<div className={classNames(cls.wrapper, {}, [className])}>
 				<img src={Logo} alt="logo" />
 				<h1>TeamHost</h1>
